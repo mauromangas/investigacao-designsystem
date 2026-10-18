@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matriz Editorial v2.0 — Bancada Cartográfica &amp; O Tear Editorial</title>
+  
+  <!-- Fontes de Alta Precisão Tipográfica (Direção C: O Novo Rigor Europeu) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..700&family=JetBrains+Mono:wght@400;500;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Public+Sans:ital,wght@0,400..800;1,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..800;1,8..60,400..800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-paper-light">
+
+  <!-- ======================================================================
+       1. COMUTADOR GLOBAL DE VERSÃO (28px TECHNICAL BAR)
+       ====================================================================== -->
+  <nav class="version-switcher-bar" aria-label="Comutador Global de Versão">
+    <div class="version-switcher-brand">
+      <span class="brand-institution">ESAD.CR</span>
+      <span class="brand-divider">/</span>
+      <span class="brand-topic">DISSERTAÇÃO DE MESTRADO</span>
+    </div>
+    <div class="version-switcher-nav">
+      <a href="/v1/" class="version-btn">[ VERSÃO 1.0 : MATRIZ CLÁSSICA ]</a>
+      <a href="/v2/" class="version-btn is-active" aria-current="page">[ VERSÃO 2.0 : BANCADA CARTOGRÁFICA ]</a>
+    </div>
+  </nav>
+
+  <!-- ======================================================================
+       2. CABEÇALHO TÉCNICO & TELEMETRIA EM TEMPO REAL
+       ====================================================================== -->
+  <header class="v2-header" role="banner">
+    <div class="v2-header-top">
+      <div class="v2-meta-academic">
+        <span class="v2-badge-thesis">INVESTIGAÇÃO CIENTÍFICA</span>
+        <h1 class="v2-app-title">O Tear Editorial <span class="v2-sub-title">/ Split-Bench Cartográfico de Design Systems</span></h1>
+      </div>
+
+      <!-- Telemetria do Nó Focado (Tempo Real) -->
+      <div class="v2-telemetry-box" aria-live="polite" aria-atomic="true">
+        <span class="telemetry-label">TELEMETRIA ÓTICA</span>
+        <div id="v2Telemetry" class="telemetry-value">
+          [ COORD: L0.N1 | ENTIDADE: ESCOLA SUÍÇA | EIXO: RAIZ IMPRESSA ]
+        </div>
+      </div>
+
+      <!-- Barra de Ferramentas Técnicas -->
+      <div class="v2-tools-row">
+        <button id="btnToggleLineage" class="v2-tool-btn" title="Alternar Linhagem Histórica (L)">
+          <span class="tool-glyph">⑂</span> LINHAGEM (L)
+        </button>
+        <button id="btnToggleTheme" class="v2-tool-btn" title="Alternar Modo Noturno / Papel Mineral">
+          <span class="tool-glyph">◐</span> TEMA
+        </button>
+        <button id="btnOpenHelpV2" class="v2-tool-btn" title="Atalhos e Instruções (H)">
+          <span class="tool-glyph">?</span> GUIA (H)
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       3. WORKSPACE DE DOIS PLANOS: SPLIT-BENCH ZUI
+       ====================================================================== -->
+  <main id="v2WorkspaceBench" class="v2-workspace state-panoramic" role="main">
+
+    <!-- --------------------------------------------------------------------
+         PLANO ESQUERDO: O MAPA CARTOGRÁFICO & MINIMAPA COMPRIMIDO
+         -------------------------------------------------------------------- -->
+    <section id="v2BenchLeft" class="v2-bench-left" aria-label="Mapa Cartográfico da Matriz">
+      
+      <!-- Contentor com Scroll 2D da Matriz -->
+      <div class="v2-grid-scroll-viewport" id="v2GridViewport">
+        
+        <!-- SVG Mira Ortogonal (Crosshairs) -->
+        <svg id="crosshairSvg" class="crosshair-svg-layer" aria-hidden="true">
+          <line id="crosshairH" class="crosshair-line" x1="0" y1="-100" x2="100%" y2="-100" />
+          <line id="crosshairV" class="crosshair-line" x1="-100" y1="0" x2="-100" y2="100%" />
+        </svg>
+
+        <!-- SVG Camada de Linhagem Histórica (Cross-References) -->
+        <svg id="lineageSvg" class="lineage-svg-layer" aria-hidden="true">
+          <defs>
+            <marker id="lineageArrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M 1 1 L 8 5 L 1 9 z" fill="#A81E17" />
+            </marker>
+          </defs>
+          <g id="lineagePathsGroup"></g>
+        </svg>
+
+        <!-- A Tabela da Matriz v2 -->
+        <div id="v2MatrixTable" class="v2-matrix-table" role="grid" aria-readonly="true">
+          <!-- Renderizado dinamicamente via v2/main.js -->
+        </div>
+
+      </div>
+
+      <!-- Dica de Minimapa no modo Split -->
+      <div class="v2-minimap-status-strip">
+        <span id="v2MinimapHint">MODO MAPA COMPRIMIDO — NAVEGAÇÃO POR CURSOR OU CLIQUE ATIVA</span>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         PLANO DIREITO: A BANCADA DE DISSECAÇÃO (PLANO DE NÓ & COMPARAÇÃO)
+         -------------------------------------------------------------------- -->
+    <section id="v2BenchRight" class="v2-bench-right" aria-label="Bancada de Dissecação Editorial" aria-hidden="true">
+      
+      <!-- Barra Superior da Bancada -->
+      <header class="v2-bench-top-bar">
+        <div class="bench-breadcrumb-box">
+          <span class="bench-scope-tag">DISSECAÇÃO</span>
+          <span class="bench-slash">/</span>
+          <span id="benchActiveCoordTag" class="bench-coord-tag">L0.N1</span>
+          <span class="bench-entity-tag" id="benchActiveEntityTag">ESCOLA SUÍÇA</span>
+        </div>
+
+        <div class="bench-actions-cluster">
+          <button id="btnPinNode" class="v2-bench-btn" title="Fixar este nó para comparar com outro (Tecla C)">
+            <span class="btn-glyph">[+]</span> <span id="lblPinAction">FIXAR PARA COMPARAR (C)</span>
+          </button>
+          <button id="btnCloseBench" class="v2-bench-btn close-btn" title="Fechar Bancada e Expandir Matriz (ESC)">
+            <span class="btn-glyph">✕</span> FECHAR (ESC)
+          </button>
+        </div>
+      </header>
+
+      <!-- Área de Leitura & Comparação da Bancada -->
+      <div class="v2-bench-scroll-body" id="benchScrollBody">
+        
+        <!-- Painel de Comparação Fixado (Ativado no modo Pin / Compare - Múltiplos Nós) -->
+        <div id="benchPinnedSection" class="bench-pinned-section" style="display: none;">
+          <div class="bench-compare-banner">
+            <span class="compare-badge" id="pinnedCountBadge">NÓS FIXADOS PARA COMPARAÇÃO (0)</span>
+            <button id="btnUnpinAllNodes" class="compare-unpin-btn" title="Desafixar todos os nós comparados">DESAFIXAR TODOS ✕</button>
+          </div>
+          <div id="pinnedNodesGrid" class="bench-pinned-grid">
+            <!-- Cards de nós fixados gerados dinamicamente via JS -->
+          </div>
+        </div>
+
+        <!-- Painel Principal do Nó Ativo -->
+        <article id="benchActiveSection" class="bench-active-section">
+          
+          <div class="bench-meta-header">
+            <div class="bench-tags-row" id="benchTagsRow">
+              <!-- Tags dinâmicas -->
+            </div>
+            <h2 id="benchNodeTitle" class="bench-node-headline">
+              A Racionalidade Pós-Guerra e a Informação de Massa
+            </h2>
+            <div id="benchNodeSub" class="bench-system-sub">
+              Sistema: Grelha Modular Internacional · Arquétipo: Matriz Tipográfica
+            </div>
+          </div>
+
+          <!-- Grelha em Duas Colunas da Bancada: Prosa Editorial e Artefacto -->
+          <div class="bench-grid-columns" id="benchGridColumns">
+            
+            <!-- Coluna de Leitura e Genealogia -->
+            <div class="bench-prose-col">
+              <div class="bench-reading-label">ANÁLISE HISTÓRICO-CRÍTICA</div>
+              <div id="benchProseContent" class="bench-prose-text">
+                <!-- Parágrafos de investigação -->
+              </div>
+
+              <!-- Relações Genealógicas Diretas -->
+              <div class="bench-genealogy-box">
+                <div class="genealogy-header">LINHAGEM &amp; CONEXÕES SISTÉMICAS</div>
+                <div id="benchGenealogyLinks" class="genealogy-links-stack">
+                  <!-- Links para nós relacionados -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Coluna Lateral: Componente-Testemunha (Raio-X Interativo) -->
+            <div class="bench-specimen-col" id="benchSpecimenCol">
+              <div class="specimen-frame-header">
+                <span class="specimen-label">COMPONENTE-TESTEMUNHA / RAIO-X</span>
+                <span id="specimenBadgeCoord" class="specimen-badge">L0.N7</span>
+              </div>
+              <div id="benchSpecimenCanvas" class="bench-specimen-canvas">
+                <!-- Protótipo HTML/CSS correspondente a cada caso -->
+              </div>
+              <div id="benchSpecimenControls" class="bench-specimen-controls">
+                <!-- Botões interativos do artefacto -->
+              </div>
+              <div id="benchWcagNotice" class="bench-wcag-notice">
+                <!-- Análise de conformidade WCAG 2.2 -->
+              </div>
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+      <!-- Rodapé Técnico com Navegação Quadrilateral -->
+      <footer class="v2-bench-nav-bar">
+        <span class="nav-hint-txt">NAVEGAÇÃO DIRETA NA BANCADA:</span>
+        <div class="bench-nav-buttons-cluster">
+          <button id="btnBenchUp" class="bench-nav-btn" aria-label="Caso Anterior (Cima)">
+            <kbd class="kbd-cap">↑</kbd> <span id="lblBenchUp">CASO ANTERIOR</span>
+          </button>
+          <button id="btnBenchPrev" class="bench-nav-btn" aria-label="Fase Anterior (Esquerda)">
+            <kbd class="kbd-cap">←</kbd> <span id="lblBenchPrev">FASE ANTERIOR</span>
+          </button>
+          <button id="btnBenchDown" class="bench-nav-btn" aria-label="Caso Seguinte (Baixo)">
+            <kbd class="kbd-cap">↓</kbd> <span id="lblBenchDown">CASO SEGUINTE</span>
+          </button>
+          <button id="btnBenchNext" class="bench-nav-btn" aria-label="Fase Seguinte (Direita)">
+            <kbd class="kbd-cap">→</kbd> <span id="lblBenchNext">FASE SEGUINTE</span>
+          </button>
+        </div>
+      </footer>
+
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       4. BARRA DE UTILIDADE INFERIOR FIXA (MOBILE & TOUCH < 768px)
+       ====================================================================== -->
+  <nav id="v2MobileBar" class="v2-mobile-bottom-bar" aria-label="Navegação Móvel">
+    <button id="btnMobileSheetAxes" class="mobile-bar-btn" aria-label="Menu de Casos e Eixos">
+      <span class="bar-icon">☷</span>
+      <span class="bar-label">Eixos</span>
+    </button>
+    <button id="btnMobileSheetA11y" class="mobile-bar-btn" aria-label="Acessibilidade e Tipografia">
+      <span class="bar-icon">Aa</span>
+      <span class="bar-label">Leitura</span>
+    </button>
+    <button id="btnMobileCompareToggle" class="mobile-bar-btn" aria-label="Comparar dois casos">
+      <span class="bar-icon">⇄</span>
+      <span class="bar-label">Comparar</span>
+    </button>
+    <button id="btnMobileCloseNode" class="mobile-bar-btn" aria-label="Fechar Detalhe e Voltar">
+      <span class="bar-icon">✕</span>
+      <span class="bar-label">Voltar</span>
+    </button>
+  </nav>
+
+  <!-- Bottom Sheet 1: Eixos e Casos (Mobile) -->
+  <div id="v2SheetAxes" class="v2-bottom-sheet" aria-hidden="true" role="dialog">
+    <div class="sheet-scrim"></div>
+    <div class="sheet-panel">
+      <div class="sheet-header">
+        <h4 class="sheet-title">Navegar por Eixos &amp; Casos de Estudo</h4>
+        <button class="sheet-close-btn" aria-label="Fechar Painel">✕</button>
+      </div>
+      <div class="sheet-content">
+        <h5 class="sheet-group-label">Casos Cronológicos (Linhas L0–L7):</h5>
+        <div class="sheet-cases-grid" id="sheetCasesButtons">
+          <!-- Gerado via JS -->
+        </div>
+        <h5 class="sheet-group-label" style="margin-top: 1rem;">Dimensões Sistémicas (Colunas N1–N7):</h5>
+        <div class="sheet-cols-grid" id="sheetColsButtons">
+          <!-- Gerado via JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Sheet 2: Acessibilidade & Tipografia (Mobile) -->
+  <div id="v2SheetA11y" class="v2-bottom-sheet" aria-hidden="true" role="dialog">
+    <div class="sheet-scrim"></div>
+    <div class="sheet-panel">
+      <div class="sheet-header">
+        <h4 class="sheet-title">Acessibilidade, Escala &amp; Superfície</h4>
+        <button class="sheet-close-btn" aria-label="Fechar Painel">✕</button>
+      </div>
+      <div class="sheet-content">
+        <div class="a11y-section">
+          <label class="a11y-label">Escala Tipográfica de Leitura:</label>
+          <div class="a11y-scale-buttons">
+            <button class="scale-step-btn" data-scale="1.0">100%</button>
+            <button class="scale-step-btn" data-scale="1.15">115%</button>
+            <button class="scale-step-btn" data-scale="1.3">130%</button>
+            <button class="scale-step-btn" data-scale="1.5">150%</button>
+          </div>
+        </div>
+        <div class="a11y-section" style="margin-top: 1.25rem;">
+          <label class="a11y-label">Superfície Mineral:</label>
+          <div class="a11y-theme-buttons">
+            <button class="theme-select-btn active" id="btnThemeMineralLight">Papel Algodão (#F7F5F0)</button>
+            <button class="theme-select-btn" id="btnThemeMineralDark">Grafite Noturno (#121314)</button>
+            <button class="theme-select-btn" id="btnThemeHighContrast">Alto Contraste AAA</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       5. ELEMENTOS AUXILIARES: TOOLTIP DE LINHAGEM E MODAL DE AJUDA
+       ====================================================================== -->
+  <!-- Tooltip de Conexão Histórica Flutuante -->
+  <div id="lineageTooltip" class="v2-lineage-tooltip" role="tooltip" aria-hidden="true">
+    <div class="lineage-tooltip-head" id="lineageTooltipHead">L0.N2 ➔ L1.N6</div>
+    <div class="lineage-tooltip-body" id="lineageTooltipBody">
+      Explicação da transferência metodológica ou técnica...
+    </div>
+  </div>
+
+  <!-- Modal de Guia de Navegação e Teclado da v2 -->
+  <div id="v2HelpModal" class="v2-modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="v2-modal-panel">
+      <header class="v2-modal-header">
+        <div class="modal-badge">MANUAL TÉCNICO V2.0</div>
+        <h3 class="modal-title">A Bancada Cartográfica: Guia de Operação</h3>
+        <button id="btnCloseHelpModal" class="modal-close-btn" aria-label="Fechar Guia (Escape)">✕</button>
+      </header>
+
+      <div class="v2-modal-grid">
+        <div class="v2-guide-card">
+          <div class="guide-card-tag">CONTROLOS DE TECLADO</div>
+          <ul class="guide-list">
+            <li><kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> : Move a mira cartográfica pela matriz.</li>
+            <li><kbd>ENTER</kbd> : Abre o nó ativo na Bancada de Dissecação sem tapar o mapa.</li>
+            <li><kbd>ESC</kbd> : Recolhe a bancada e restaura o mapa a 100%.</li>
+            <li><kbd>C</kbd> : Tranca/desafixa nó para comparação lado a lado.</li>
+            <li><kbd>L</kbd> : Ativa/desativa a camada de linhagem histórica (linhas SVG).</li>
+            <li><kbd>H</kbd> : Abre/fecha este manual de atalhos.</li>
+          </ul>
+        </div>
+
+        <div class="v2-guide-card">
+          <div class="guide-card-tag">MIRA ÓTICA &amp; BANCADA SPLIT-BENCH</div>
+          <p class="guide-desc">
+            A Versão 2 substitui o padrão modal tradicional por uma bancada de trabalho contínua inspirada no design suíço. 
+            Ao abrir um caso de estudo, a matriz reduz-se a 38% da janela para funcionar como minimapa ótico de coordenadas, 
+            permitindo saltar instantaneamente entre qualquer outro nó mantendo a leitura aberta no plano direito.
+          </p>
+        </div>
+      </div>
+
+      <footer class="v2-modal-footer">
+        <button id="btnDismissHelp" class="v2-action-btn">ENTENDIDO <kbd>ENTER</kbd></button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Dataset partilhado e Controlador da v2 -->
+  <script src="../shared/data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

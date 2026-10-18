@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matriz Genealógica de Design Systems Editoriais</title>
+  
+  <!-- Tipografia Editorial: Source Serif 4, Newsreader, Public Sans, Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..700&family=JetBrains+Mono:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Public+Sans:ital,wght@0,400..700;1,400..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="canvas-base">
+
+  <!-- Comutador Global de Versão (Version Switcher) -->
+  <nav class="version-switcher-bar" aria-label="Comutador Global de Versão">
+    <div class="version-switcher-brand">ESAD.CR · DISSERTAÇÃO DE MESTRADO</div>
+    <div class="version-switcher-nav">
+      <a href="/v1/" class="version-btn is-active" aria-current="page">[ VERSÃO 1.0 : MATRIZ CLÁSSICA ]</a>
+      <a href="/v2/" class="version-btn">[ VERSÃO 2.0 : BANCADA CARTOGRÁFICA ]</a>
+    </div>
+  </nav>
+
+  <!-- Acessibilidade: Skip Link -->
+  <a href="#main-matrix" class="skip-link">Saltar para a Matriz de Conteúdo</a>
+
+  <!-- Cabeçalho Técnico Editorial Suíço -->
+  <header class="swiss-header" role="banner">
+    <div class="header-top-meta">
+      <div class="meta-block">
+        <span class="meta-val">MESTRADO EM DESIGN GRÁFICO — ESAD.CR</span>
+      </div>
+      <div class="meta-block text-right">
+        <button id="btnOpenGuide" class="swiss-btn-help" aria-haspopup="dialog" aria-label="Abrir Guia de Utilização (Rato e Teclado)">? COMO NAVEGAR</button>
+        <span class="meta-label">COORDENADAS</span>
+        <span class="meta-val" id="active-coord-display">8 × 7 MATRIZ [L0–L7 : N1–N7]</span>
+      </div>
+    </div>
+
+    <div class="header-main-title">
+      <div class="title-col">
+        <div class="badge-swiss">ESQUEMA DE INVESTIGAÇÃO</div>
+        <h1 class="main-title">Matriz Genealógica &amp; Comparativa de Design Systems Editoriais</h1>
+        <p class="main-subtitle">Grelha Suíça e Formatos Impressos &rarr; Engenharia de Tokens Multi-Marca + Diagnóstico Nacional</p>
+      </div>
+      <div class="header-legend-col">
+        <div class="legend-box">
+          <div class="legend-row">
+            <span class="legend-swatch swatch-predigital"></span>
+            <span class="legend-text"><strong>N1–N2:</strong> Fase Pré-Digital (Print, Grelhas Físicas e Raízes)</span>
+          </div>
+          <div class="legend-row">
+            <span class="legend-swatch swatch-digital"></span>
+            <span class="legend-text"><strong>N3–N7:</strong> Sistematização Digital (DS, Tokens, Leis, Output)</span>
+          </div>
+          <div class="legend-row">
+            <span class="legend-swatch swatch-born-digital"></span>
+            <span class="legend-text"><strong>L7:</strong> Nativo Digital (Pré-História sem Papel)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Indicador de Grelha Tátil Mobile -->
+    <div class="mobile-grid-hint" aria-hidden="true">
+      <span class="hint-icon">↔</span>
+      <span class="hint-text">Grelha editorial tátil — desliza para navegar pelos casos e dimensões</span>
+    </div>
+  </header>
+
+  <!-- PLANO 1: Matriz Panorâmica -->
+  <main id="main-matrix" class="matrix-viewport" role="main" aria-label="Matriz Genealógica de Design Systems">
+    <div class="matrix-scroll-container" id="matrixScrollContainer">
+      <div class="swiss-matrix-table" id="matrixTable" role="grid" aria-readonly="true">
+        <!-- Renderizado dinamicamente via JS -->
+      </div>
+
+      <!-- Linha Institucional Académica no Fim da Tabela -->
+      <aside class="academic-credit-row" role="note" aria-label="Créditos Académicos">
+        <div class="academic-credit-text">
+          Mauro Negrão Mangas @ ESAD.CR — ULO — Professor Fernando Oliveira
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- PLANO 2: View de Leitura Profunda (Plano de Nó) -->
+  <div id="nodeDetailView" class="node-detail-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="detailNodeTitle">
+    <div class="node-detail-panel">
+      
+      <!-- Barra Técnica Superior -->
+      <div class="detail-top-bar">
+        <div class="detail-breadcrumbs">
+          <div class="breadcrumb-line-1">
+            <span class="detail-coord-badge" id="detailCoordBadge">[L0.N1]</span>
+            <span class="detail-separator">/</span>
+            <span class="detail-entity-name" id="detailEntityName">A Matriz Teórica</span>
+            <span class="detail-vs-token">vs</span>
+            <span class="detail-col-name" id="detailColName">Raiz Impressa</span>
+          </div>
+          <div class="breadcrumb-line-2" id="detailBreadcrumbSub">
+            Suiça / Internacional, (1950-1970) / Fase Pré-Digital
+          </div>
+        </div>
+        
+        <div class="detail-actions">
+          <span class="detail-hint-esc">ESC PARA FECHAR</span>
+          <button id="closeDetailBtn" class="swiss-btn-close" aria-label="Fechar Detalhe do Nó (Escape)">
+            <span aria-hidden="true">✕</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Corpo do Detalhe -->
+      <div class="detail-scroll-area" tabindex="0">
+        
+        <!-- Cabeçalho do Nó -->
+        <header class="detail-content-header">
+          <div class="detail-tags-row" id="detailTagsRow">
+            <!-- Tags aqui -->
+          </div>
+          <h2 id="detailNodeTitle" class="detail-title">Título do Nó</h2>
+          <div class="detail-system-subtitle" id="detailSystemSubtitle">
+            Sistema / Caso de Estudo: Nome do Sistema
+          </div>
+        </header>
+
+        <!-- Layout em Duas Colunas: Texto Editorial + (se N7) Componente-Testemunha -->
+        <div class="detail-body-grid" id="detailBodyGrid">
+          <section class="detail-text-col" id="detailTextCol" aria-label="Texto de Investigação">
+            <h3 class="technical-label">O QUÊ</h3>
+            <div class="editorial-prose" id="detailProseContent">
+              <!-- Conteúdo textual completo -->
+            </div>
+            
+            <!-- Conexões Genealógicas se existirem para este nó -->
+            <div id="detailCrossReferences" class="detail-cross-references">
+              <!-- Relações genealógicas -->
+            </div>
+          </section>
+
+          <!-- Coluna Lateral: Metadados Técnicos ou Componente-Testemunha (quando N7) -->
+          <aside class="detail-witness-col" id="detailWitnessCol" aria-label="Artefacto ou Especificação Técnica">
+            <!-- Renderizado dinamicamente para N7 ou Painel de Metadados nos Nós 1-6 -->
+          </aside>
+        </div>
+
+      </div>
+
+      <!-- Barra de Navegação Entre Nós Adjacentes (Esquema Teclas Cursor do Teclado) -->
+      <nav class="detail-nav-footer" aria-label="Navegação entre nós adjacentes">
+        <div class="cursor-schema-header">
+          <span class="cursor-schema-title">NAVEGAÇÃO ADJACENTE (CURSOR OU TECLADO)</span>
+          <span class="cursor-schema-hint">Usa as setas do cursor no teclado ou clica nos botões abaixo para avançar para a célula vizinha:</span>
+        </div>
+
+        <!-- Esquema Inverted-T do Teclado -->
+        <div class="cursor-keyboard-cluster" role="group" aria-label="Esquema Teclas Cursor">
+          <!-- Linha Superior: Tecla Cima (Caso Anterior) -->
+          <div class="cluster-row cluster-row-top">
+            <button id="btnUpNode" class="key-arrow-btn key-up" aria-label="Caso Anterior (Seta Cima)">
+              <kbd class="key-cap">↑</kbd>
+              <div class="key-label-block">
+                <span class="key-dir-tag">CASO ANTERIOR (CIMA)</span>
+                <span class="key-dest-text" id="upNodeName">L0 · A Matriz Teórica</span>
+              </div>
+            </button>
+          </div>
+
+          <!-- Linha Inferior: Teclas Esquerda, Baixo, Direita -->
+          <div class="cluster-row cluster-row-bottom">
+            <button id="btnPrevNode" class="key-arrow-btn key-left" aria-label="Fase Anterior (Seta Esquerda)">
+              <kbd class="key-cap">←</kbd>
+              <div class="key-label-block">
+                <span class="key-dir-tag">FASE ANTERIOR (ESQ)</span>
+                <span class="key-dest-text" id="prevNodeName">N1 · Raiz Impressa</span>
+              </div>
+            </button>
+
+            <button id="btnDownNode" class="key-arrow-btn key-down" aria-label="Caso Seguinte (Seta Baixo)">
+              <kbd class="key-cap">↓</kbd>
+              <div class="key-label-block">
+                <span class="key-dir-tag">CASO SEGUINTE (BAIXO)</span>
+                <span class="key-dest-text" id="downNodeName">L2 · BBC GEL</span>
+              </div>
+            </button>
+
+            <button id="btnNextNode" class="key-arrow-btn key-right" aria-label="Fase Seguinte (Seta Direita)">
+              <kbd class="key-cap">→</kbd>
+              <div class="key-label-block">
+                <span class="key-dir-tag">FASE SEGUINTE (DIR)</span>
+                <span class="key-dest-text" id="nextNodeName">N3 · Sistemas Vivos</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+
+  <!-- Barra de Estado Fixa no Rodapé (Atalhos e Status da Matriz em Desktop) -->
+  <footer class="swiss-status-bar" role="contentinfo">
+    <div class="status-shortcuts">
+      <span class="shortcut-item"><kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> Navegar na Grelha</span>
+      <span class="shortcut-divider">|</span>
+      <span class="shortcut-item"><kbd>ENTER</kbd> Abrir Nó</span>
+      <span class="shortcut-divider">|</span>
+      <span class="shortcut-item"><kbd>ESC</kbd> Voltar à Matriz</span>
+      <span class="shortcut-divider">|</span>
+      <button id="btnStatusBarGuide" class="status-guide-link">? Guia de Navegação</button>
+    </div>
+    <div class="status-focus-info">
+      <span class="focus-label">NÓ EM FOCO:</span>
+      <span class="focus-val" id="statusBarFocusCoord">L0.N1 — A Matriz Teórica</span>
+    </div>
+  </footer>
+
+  <!-- Modal de Boas-Vindas & Instruções de Utilização (Rato e Teclado) -->
+  <div id="welcomeModal" class="guide-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="guideModalTitle" aria-hidden="true">
+    <div class="guide-modal-panel">
+      
+      <header class="guide-modal-header">
+        <div class="guide-badge">INVESTIGAÇÃO ACADÉMICA · GUIA RÁPIDO</div>
+        <h2 id="guideModalTitle" class="guide-title">Como Explorar a Matriz Editorial</h2>
+        <p class="guide-intro">
+          Esta plataforma investiga a evolução dos Sistemas de Design nos meios de comunicação social (do papel ao digital). Podes navegar por todo o ecossistema através de duas formas complementares:
+        </p>
+        <button id="btnCloseGuideModal" class="swiss-btn-close" aria-label="Fechar Guia (Escape)">✕</button>
+      </header>
+
+      <div class="guide-methods-grid">
+        
+        <!-- Método 1: Rato / Toque -->
+        <div class="guide-method-card">
+          <div class="method-header">
+            <span class="method-icon-badge">RATO / TOQUE</span>
+            <h3 class="method-title">Navegação Visual</h3>
+            <span class="method-subtitle">Exploração intuitiva da grelha</span>
+          </div>
+          <ul class="method-steps">
+            <li>
+              <strong>1. Percorrer a Grelha:</strong> Desliza na horizontal e na vertical para navegar pelos 8 Casos de Estudo (linhas L0–L7) e 7 Dimensões Sistémicas (colunas N1–N7).
+            </li>
+            <li>
+              <strong>2. Abrir uma Célula:</strong> Clica ou toca em qualquer nó da matriz para aceder à leitura integral e aos artefactos interativos.
+            </li>
+            <li>
+              <strong>3. Navegar entre Nós:</strong> No rodapé do nó aberto, usa os botões com as setas de cursor para saltar imediatamente para as células vizinhas.
+            </li>
+            <li>
+              <strong>4. Fechar:</strong> Clica no botão <kbd>✕</kbd> no topo ou fora do painel para regressar à grelha panorâmica.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Método 2: Teclado -->
+        <div class="guide-method-card">
+          <div class="method-header">
+            <span class="method-icon-badge">TECLADO</span>
+            <h3 class="method-title">Navegação por Teclado</h3>
+            <span class="method-subtitle">Rápida, contínua e 100% acessível</span>
+          </div>
+          <ul class="method-steps">
+            <li>
+              <div class="step-keycap-group"><kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd></div>
+              <div><strong>Navegar na Grelha:</strong> Move a seleção de célula em célula sem retirar as mãos do teclado.</div>
+            </li>
+            <li>
+              <div class="step-keycap-group"><kbd>ENTER</kbd> ou <kbd>ESPAÇO</kbd></div>
+              <div><strong>Abrir Nó:</strong> Abre a célula em foco para leitura aprofundada do texto de investigação.</div>
+            </li>
+            <li>
+              <div class="step-keycap-group"><kbd>ESC</kbd></div>
+              <div><strong>Fechar e Voltar:</strong> Fecha o nó e regressa instantaneamente à grelha, mantendo a mesma posição.</div>
+            </li>
+            <li>
+              <div class="step-keycap-group"><kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> no nó</div>
+              <div><strong>Saltar entre Nós:</strong> Navega diretamente entre casos cronológicos e dimensões vizinhas.</div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <footer class="guide-modal-footer">
+        <label class="guide-checkbox-wrap">
+          <input type="checkbox" id="chkDoNotShowGuideAgain" />
+          <span>Não voltar a mostrar automaticamente ao iniciar</span>
+        </label>
+        <button id="btnStartExploring" class="guide-btn-action">
+          ENTRAR NA INVESTIGAÇÃO <kbd class="kbd-inline">ENTER</kbd>
+        </button>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="../shared/data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

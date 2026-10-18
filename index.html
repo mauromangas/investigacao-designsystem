@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matriz Genealógica de Design Systems Editoriais — ESAD.CR</title>
+  <meta http-equiv="refresh" content="0; url=/v2/" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border-radius: 0 !important;
+    }
+    body {
+      background-color: #141413;
+      color: #F7F5F0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      text-align: center;
+    }
+    .router-card {
+      background: #1C1E21;
+      border: 1px solid #2E3136;
+      border-top: 4px solid #A81E17;
+      padding: 2.5rem;
+      max-width: 600px;
+      width: 100%;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      background: #A81E17;
+      color: #FFF;
+      padding: 3px 8px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: #FFFFFF;
+      line-height: 1.3;
+    }
+    p {
+      color: #B5B2AA;
+      font-size: 12px;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .version-choices {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .choice-btn {
+      display: block;
+      padding: 0.85rem 1.25rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.15s ease, color 0.15s ease;
+      border: 1px solid #4A4945;
+    }
+    .btn-v2 {
+      background: #A81E17;
+      color: #FFFFFF;
+      border-color: #A81E17;
+    }
+    .btn-v2:hover {
+      background: #D90000;
+      border-color: #D90000;
+    }
+    .btn-v1 {
+      background: #25282C;
+      color: #EAE8E3;
+    }
+    .btn-v1:hover {
+      background: #3A3E45;
+      color: #FFFFFF;
+    }
+    .loading-notice {
+      margin-top: 1.5rem;
+      font-size: 10.5px;
+      color: #8C8981;
+    }
+  </style>
+  <script>
+    // Redirecionamento automático imediato para a Versão 2.0 (Bancada Cartográfica)
+    window.location.replace('/v2/');
+  </script>
+</head>
+<body>
+  <main class="router-card" role="main">
+    <div class="badge">ESAD.CR / DISSERTAÇÃO DE MESTRADO</div>
+    <h1>Matriz de Design Systems Editoriais</h1>
+    <p>A carregar a nova <strong>Versão 2.0 (Bancada Cartográfica / O Tear Editorial)</strong>...</p>
+    
+    <div class="version-choices">
+      <a href="/v2/" class="choice-btn btn-v2">[ VERSÃO 2.0 : BANCADA CARTOGRÁFICA (NOVA) ]</a>
+      <a href="/v1/" class="choice-btn btn-v1">[ VERSÃO 1.0 : MATRIZ CLÁSSICA ORIGINAL ]</a>
+    </div>
+
+    <div class="loading-notice">
+      Se o redirecionamento automático não ocorrer, selecione uma das versões acima.
+    </div>
+  </main>
+</body>
+</html>
