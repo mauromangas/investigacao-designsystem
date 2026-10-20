@@ -102,6 +102,55 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ==========================================================================
+   COMUTADOR GLOBAL DE VERSÃO (28px TECHNICAL TOP BAR)
+   ========================================================================== */
+.version-switcher-bar {
+  height: 28px;
+  background-color: #141413;
+  color: #F7F5F0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.25rem;
+  border-bottom: 1px solid #2E3136;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  letter-spacing: 0.05em;
+}
+
+.version-switcher-brand {
+  font-weight: 700;
+  color: #8C8981;
+  text-transform: uppercase;
+}
+
+.version-switcher-nav {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.version-btn {
+  color: #B5B2AA;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 2px 6px;
+  transition: all var(--transition-swiss);
+}
+
+.version-btn:hover {
+  color: #FFFFFF;
+}
+
+.version-btn.is-active {
+  color: #FFFFFF;
+  background-color: #2E3136;
+  font-weight: 700;
+}
+
 /* Regra Estrita de Números Tabulares (Sem saltos visuais em datas e tabelas) */
 time,
 .node-meta-time,

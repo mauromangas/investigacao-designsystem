@@ -1,0 +1,100 @@
+{
+  "L0.N2": {
+    "filename": "L0-N2-muller-brockmann-grid-systems.jpg",
+    "filepath": "/assets/images/L0-N2-muller-brockmann-grid-systems.jpg",
+    "caption": "FIG. L0.N2 — Diagrama de grelha modular por Josef Müller-Brockmann (1961).",
+    "sourceCredit": "Museum für Gestaltung Zürich / Niggli Verlag",
+    "aspectRatio": "4/3"
+  },
+  "L0.N6": {
+    "filename": "L0-N6-frutiger-univers-matrix-1957.jpg",
+    "filepath": "/assets/images/L0-N6-frutiger-univers-matrix-1957.jpg",
+    "caption": "FIG. L0.N6 — Matriz cartesiana da família Univers de Adrian Frutiger (1957).",
+    "sourceCredit": "Deberny & Peignot Archive",
+    "aspectRatio": "4/3"
+  },
+  "L1.N2": {
+    "filename": "L1-N2-guardian-berliner-frontpage-2005.jpg",
+    "filepath": "/assets/images/L1-N2-guardian-berliner-frontpage-2005.jpg",
+    "caption": "FIG. L1.N2 — Estreia do formato Berliner do The Guardian (12 de setembro de 2005).",
+    "sourceCredit": "Mark Porter Associates / Guardian News & Media",
+    "aspectRatio": "4/3"
+  },
+  "L1.N7": {
+    "filename": "L1-N7-guardian-source-pillar-cards.jpg",
+    "filepath": "/assets/images/L1-N7-guardian-source-pillar-cards.jpg",
+    "caption": "FIG. L1.N7 — Cartões noticiosos estruturados pelos cinco pilares editoriais do Guardian Source.",
+    "sourceCredit": "The Guardian Design Team",
+    "aspectRatio": "4/3"
+  },
+  "L2.N3": {
+    "filename": "L2-N3-bbc-gel-foundations-grid-2010.jpg",
+    "filepath": "/assets/images/L2-N3-bbc-gel-foundations-grid-2010.jpg",
+    "caption": "FIG. L2.N3 — Grelha universal do BBC GEL (Global Experience Language, 2010).",
+    "sourceCredit": "BBC GEL Framework",
+    "aspectRatio": "4/3"
+  },
+  "L2.N5": {
+    "filename": "L2-N5-bbc-reith-typography-dalton-maag.jpg",
+    "filepath": "/assets/images/L2-N5-bbc-reith-typography-dalton-maag.jpg",
+    "caption": "FIG. L2.N5 — Espécime tipográfico da família BBC Reith (Dalton Maag) focado em acessibilidade.",
+    "sourceCredit": "BBC / Dalton Maag",
+    "aspectRatio": "4/3"
+  },
+  "L3.N2": {
+    "filename": "L3-N2-financial-times-pink-paper-print.jpg",
+    "filepath": "/assets/images/L3-N2-financial-times-pink-paper-print.jpg",
+    "caption": "FIG. L3.N2 — Página impressa de mercados do Financial Times no histórico tom FT Pink.",
+    "sourceCredit": "Financial Times Archive",
+    "aspectRatio": "4/3"
+  },
+  "L3.N6": {
+    "filename": "L3-N6-ft-visual-vocabulary-poster.jpg",
+    "filepath": "/assets/images/L3-N6-ft-visual-vocabulary-poster.jpg",
+    "caption": "FIG. L3.N6 — Poster do FT Visual Vocabulary para categorização de gráficos estatísticos.",
+    "sourceCredit": "Financial Times Graphics Team / Alan Smith",
+    "aspectRatio": "4/3"
+  },
+  "L4.N1": {
+    "filename": "L4-N1-nyt-gray-lady-front-page-historical.jpg",
+    "filepath": "/assets/images/L4-N1-nyt-gray-lady-front-page-historical.jpg",
+    "caption": "FIG. L4.N1 — Primeira página austera e textual do The New York Times (era Gray Lady).",
+    "sourceCredit": "The New York Times Archives / TimesMachine",
+    "aspectRatio": "4/3"
+  },
+  "L4.N7": {
+    "filename": "L4-N7-nyt-app-dark-light-mode-ink.jpg",
+    "filepath": "/assets/images/L4-N7-nyt-app-dark-light-mode-ink.jpg",
+    "caption": "FIG. L4.N7 — Inversão semântica de tokens no The New York Times (Light vs. Dark Mode).",
+    "sourceCredit": "The New York Times Digital Product Team",
+    "aspectRatio": "4/3"
+  },
+  "L5.N1": {
+    "filename": "L5-N1-the-times-vs-the-sun-front-pages.jpg",
+    "filepath": "/assets/images/L5-N1-the-times-vs-the-sun-front-pages.jpg",
+    "caption": "FIG. L5.N1 — O contraste estético impresso entre o The Times e o The Sun no grupo News UK.",
+    "sourceCredit": "News UK Archives",
+    "aspectRatio": "4/3"
+  },
+  "L5.N7": {
+    "filename": "L5-N7-newskit-theme-switcher-component.jpg",
+    "filepath": "/assets/images/L5-N7-newskit-theme-switcher-component.jpg",
+    "caption": "FIG. L5.N7 — O mesmo componente multi-marca estilizado via tokens no NewsKit.",
+    "sourceCredit": "NewsKit Design System / News UK",
+    "aspectRatio": "4/3"
+  },
+  "L6.N2": {
+    "filename": "L6-N2-publico-mark-porter-redesign-2006.jpg",
+    "filepath": "/assets/images/L6-N2-publico-mark-porter-redesign-2006.jpg",
+    "caption": "FIG. L6.N2 — Redesenho impresso do jornal Público por Mark Porter (2006).",
+    "sourceCredit": "Mark Porter Associates / Commercial Type",
+    "aspectRatio": "4/3"
+  },
+  "L7.N7": {
+    "filename": "L7-N7-observador-radio-mobile-player.jpg",
+    "filepath": "/assets/images/L7-N7-observador-radio-mobile-player.jpg",
+    "caption": "FIG. L7.N7 — Convergência de artigo de texto e player persistente da Rádio Observador.",
+    "sourceCredit": "Observador / Equipa de Produto Digital",
+    "aspectRatio": "4/3"
+  }
+}

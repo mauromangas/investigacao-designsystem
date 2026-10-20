@@ -1,7 +1,7 @@
 window.MATRIX_DATA = {
   "metadata": {
-    "projectTitle": "Matriz Genealógica e Comparativa de Design Systems Editoriais",
-    "context": "Investigação de Mestrado em Design Gráfico — Meios de Comunicação Social Digitais",
+    "projectTitle": "Comparação de Design Systems Editoriais",
+    "context": "Investigação de mestrado em Design Gráfico — media digitais",
     "language": "pt-PT",
     "normativeFramework": [
       "WCAG 2.1 / 2.2 (AA e AAA)",
@@ -30,132 +30,132 @@ window.MATRIX_DATA = {
     {
       "id": "N1",
       "order": 1,
-      "phase": "Fase Pré-Digital",
-      "name": "Raiz Impressa",
-      "subtitle": "Contexto Histórico e Génese Editorial"
+      "phase": "Antes do digital",
+      "name": "Origens no papel",
+      "subtitle": "Contexto histórico"
     },
     {
       "id": "N2",
       "order": 2,
-      "phase": "Fase Pré-Digital",
-      "name": "Sistema Print",
-      "subtitle": "Grelhas Modulares, Tipografia e Manuais Físicos"
+      "phase": "Antes do digital",
+      "name": "Sistema impresso",
+      "subtitle": "Grelhas, tipografia e manuais"
     },
     {
       "id": "N3",
       "order": 3,
-      "phase": "Sistematização Digital",
-      "name": "Identidade do Design System",
-      "subtitle": "Génese Digital e Governação"
+      "phase": "Design system digital",
+      "name": "O design system",
+      "subtitle": "Origem e gestão"
     },
     {
       "id": "N4",
       "order": 4,
-      "phase": "Sistematização Digital",
-      "name": "Macrocontexto",
-      "subtitle": "Política, Financiamento e Modelo Económico"
+      "phase": "Design system digital",
+      "name": "Contexto económico",
+      "subtitle": "Política, financiamento e modelo de negócio"
     },
     {
       "id": "N5",
       "order": 5,
-      "phase": "Sistematização Digital",
-      "name": "Sociedade e Leis",
-      "subtitle": "Hábitos de Leitura, Privacidade (RGPD) e Acessibilidade (WCAG)"
+      "phase": "Design system digital",
+      "name": "Sociedade e leis",
+      "subtitle": "Leitura, privacidade (RGPD) e acessibilidade (WCAG)"
     },
     {
       "id": "N6",
       "order": 6,
-      "phase": "Sistematização Digital",
-      "name": "Paradigma Técnico",
-      "subtitle": "Arquitetura de Código, Atomic Design e Design Tokens"
+      "phase": "Design system digital",
+      "name": "Aspeto técnico",
+      "subtitle": "Código, Atomic Design e design tokens"
     },
     {
       "id": "N7",
       "order": 7,
-      "phase": "Sistematização Digital",
-      "name": "Anatomia e Output Visual",
-      "subtitle": "Dissecação do Componente-Testemunha"
+      "phase": "Design system digital",
+      "name": "Resultado visual",
+      "subtitle": "Análise do componente-testemunha"
     }
   ],
   "rows": [
     {
       "rowId": "L0",
       "order": 0,
-      "entity": "A Matriz Teórica",
-      "systemName": "Escola Suíça e o Design como Programa",
+      "entity": "A teoria de base",
+      "systemName": "Escola Suíça",
       "country": "Suíça / Internacional",
       "period": "1950–1970",
-      "archetype": "Fundação Teórica e Grelha Matemática",
+      "archetype": "A grelha como regra",
       "nodes": {
         "N1": {
           "coord": "L0.N1",
-          "title": "A Racionalidade Pós-Guerra e a Informação de Massa",
+          "title": "Pós-guerra e informação em massa",
           "tags": [
-            "História do Design",
+            "História do design",
             "Suíça",
             "Anos 1950"
           ],
-          "content": "Nas décadas de 1950 e 1960, o crescimento acelerado da imprensa, da edição técnica e da comunicação internacional exigiu métodos objetivos para organizar grandes volumes de informação. Na Suíça, o Estilo Tipográfico Internacional rejeita a ornamentação subjetiva em favor da clareza comunicacional, posicionando o designer não como um artista plástico, mas como um arquiteto da informação ao serviço do leitor."
+          "content": "Nos anos 1950 e 1960, a imprensa, a edição técnica e a comunicação internacional cresceram depressa. Era preciso organizar muita informação com método. Na Suíça, o Estilo Tipográfico Internacional deixou de lado o ornamento e passou a dar prioridade à clareza. O designer deixava de ser visto como artista e passava a organizar a informação para o leitor."
         },
         "N2": {
           "coord": "L0.N2",
-          "title": "Grelhas Modulares e Design como Programa",
+          "title": "Grelhas modulares e design como programa",
           "tags": [
             "Müller-Brockmann",
             "Karl Gerstner",
-            "Grelha Modular"
+            "Grelha modular"
           ],
-          "content": "Josef Müller-Brockmann ('Grid Systems in Graphic Design', 1961) codifica a grelha modular como um esqueleto matemático que governa hierarquias tipográficas e proporções espaciais. Em paralelo, Karl Gerstner ('Designing Programmes', 1964) introduz a ideia de desenhar sistemas de regras combinatórias em vez de soluções estáticas isoladas — lançando a semente teórica direta daquilo que a engenharia de software viria a batizar como Design Systems."
+          "content": "Josef Müller-Brockmann publicou 'Grid Systems in Graphic Design' em 1961 e definiu a grelha modular como uma estrutura matemática para as hierarquias tipográficas e as proporções. Em 1964, Karl Gerstner apresentou em 'Designing Programmes' a ideia de desenhar sistemas de regras em vez de soluções isoladas. Esta ideia está na origem dos design systems."
         },
         "N3": {
           "coord": "L0.N3",
-          "title": "Da Regra Impressa à Parametrização Digital",
+          "title": "Da regra impressa ao digital",
           "tags": [
             "Genealogia",
             "Sistematização",
-            "Algoritmos Visuais"
+            "Regras visuais"
           ],
-          "content": "Embora não exista um produto digital comercial nos anos 60, a teoria de Gerstner antecipa a separação entre estrutura lógica e superfície visual. O manual corporativo impresso deixa de ser um catálogo de exemplos fixos e passa a funcionar como um algoritmo visual que outros designers podem executar sem perder a coesão da identidade."
+          "content": "Nos anos 60 ainda não havia produtos digitais, mas a teoria de Gerstner já separava a estrutura da aparência visual. O manual de identidade impresso deixou de ser um catálogo de exemplos fixos e passou a ser um conjunto de regras que outros designers podiam aplicar sem perder a coerência."
         },
         "N4": {
           "coord": "L0.N4",
-          "title": "Internacionalização Corporativa e Multilinguismo",
+          "title": "Vários idiomas, um só layout",
           "tags": [
             "Europa",
-            "Comunicação Global",
-            "Elasticidade"
+            "Comunicação internacional",
+            "Flexibilidade"
           ],
-          "content": "A necessidade de comunicar simultaneamente em três ou quatro línguas oficiais (alemão, francês, italiano e inglês) na Suíça e nas instituições europeias do pós-guerra forçou a criação de layouts elásticos. O espaço da página tinha de absorver variações de comprimento de texto de 30% entre idiomas sem quebrar a harmonia da composição."
+          "content": "Na Suíça e nas instituições europeias do pós-guerra comunicava-se em três ou quatro línguas (alemão, francês, italiano e inglês). Os layouts tinham de ser flexíveis: a página precisava de aguentar diferenças de cerca de 30% no comprimento do texto entre idiomas sem perder o equilíbrio."
         },
         "N5": {
           "coord": "L0.N5",
-          "title": "Democratização da Leitura e Sinalética Pública",
+          "title": "Leitura para todos e sinalética pública",
           "tags": [
             "Objetividade",
-            "Legibilidade Pública",
-            "Neo-Grotescas"
+            "Legibilidade",
+            "Neo-grotescas"
           ],
-          "content": "A clareza tipográfica era encarada como um dever cívico. O abandono das letras góticas e decorativas em favor de tipografias sem serifa neo-grotescas (como a Akzidenz-Grotesk, Univers de Adrian Frutiger e Helvetica de Max Miedinger) procurava garantir uma leitura imediata, neutra e acessível a qualquer cidadão no espaço público."
+          "content": "A clareza tipográfica era vista como um dever cívico. Abandonaram-se as letras góticas e decorativas e passaram a usar-se tipos sem serifa neo-grotescos, como a Akzidenz-Grotesk, a Univers (de Adrian Frutiger) e a Helvetica (de Max Miedinger). O objetivo era uma leitura imediata e neutra, ao alcance de qualquer pessoa no espaço público."
         },
         "N6": {
           "coord": "L0.N6",
-          "title": "Fotocomposição e Sistemas Tipográficos Seriados",
+          "title": "Univers e a numeração das fontes",
           "tags": [
             "Univers",
             "Adrian Frutiger",
-            "Numeração Sistemática"
+            "Numeração"
           ],
-          "content": "Em 1957, Adrian Frutiger desenha a família Univers e substitui a nomenclatura tradicional confusa (negrito, condensado) por uma matriz numérica cartesiana (ex: Univers 55 para o peso normal, 65 para o negro, 57 para o condensado). Este sistema de coordenadas tipográficas é o antepassado direto dos pesos numéricos do CSS (font-weight: 400, 500, 700) e das fontes variáveis modernas."
+          "content": "Em 1957, Adrian Frutiger desenhou a Univers e trocou os nomes confusos dos estilos (negrito, condensado) por números: Univers 55 para o peso normal, 65 para o negrito e 57 para o condensado. É o antepassado dos pesos numéricos do CSS (font-weight: 400, 500, 700) e das fontes variáveis."
         },
         "N7": {
           "coord": "L0.N7",
-          "title": "A Grelha Matemática como Artefacto",
+          "title": "A grelha como base visual",
           "tags": [
             "Proporção",
-            "Módulos Espaciais",
-            "CSS Grid Ancestor"
+            "Módulos",
+            "Antepassado do CSS Grid"
           ],
-          "content": "A divisão da página em campos modulares separados por intervalos constantes (gutters) cria um ritmo visual onde texto, fotografia e legendas se alinham num eixo cartesiano rigoroso. Esta estrutura visual serve hoje de base direta ao CSS Grid Layout nos navegadores contemporâneos.",
+          "content": "A página dividida em módulos, com intervalos constantes (gutters) entre eles, cria um ritmo em que texto, fotografia e legendas ficam alinhados. Esta lógica está na base do CSS Grid, usado hoje nos navegadores.",
           "witnessComponent": {
             "type": "swiss-modular-grid",
             "interactiveFeatures": [
@@ -174,77 +174,77 @@ window.MATRIX_DATA = {
       "systemName": "Source Design System",
       "country": "Reino Unido",
       "period": "2005 (Print) / 2019–Presente (Source)",
-      "archetype": "Herança Editorial Impressa para Open Source Atómico",
+      "archetype": "Do papel ao open source",
       "nodes": {
         "N1": {
           "coord": "L1.N1",
-          "title": "A Crise do Formato Broadsheet (2003–2005)",
+          "title": "Crise do formato broadsheet (2003–2005)",
           "tags": [
-            "Imprensa Britânica",
-            "Mobilidade Urbana",
+            "Imprensa britânica",
+            "Mobilidade urbana",
             "Broadsheet"
           ],
-          "content": "No início do século XXI, os jornais de referência britânicos enfrentavam quebras acentuadas de circulação entre os leitores urbanos que viajavam de metro e comboio, onde o formato gigante broadsheet era difícil de manusear. Enquanto rivais como o The Times adotaram o formato tabloide — arriscando a associação visual à imprensa sensacionalista —, o The Guardian procurou uma terceira via física e simbólica na tradição editorial europeia."
+          "content": "No início dos anos 2000, os jornais de referência britânicos perdiam leitores, sobretudo entre quem viajava de metro e de comboio e achava o formato broadsheet, muito grande, difícil de manusear. O The Times optou pelo formato tabloide, com o risco de ser associado à imprensa sensacionalista. O The Guardian procurou uma terceira via, inspirada na tradição europeia."
         },
         "N2": {
           "coord": "L1.N2",
-          "title": "O Redesenho Berliner de Mark Porter (2005)",
+          "title": "O redesenho Berliner (2005)",
           "tags": [
             "Mark Porter",
             "Christian Schwartz",
             "Guardian Egyptian"
           ],
-          "content": "Sob a direção criativa de Mark Porter e com tipografia desenhada por Christian Schwartz e Paul Barnes, o jornal adotou o formato intermédio Berliner em setembro de 2005. O projeto instituiu uma grelha modular rigorosa, uma superfamília tipográfica exclusiva (Guardian Egyptian) capaz de articular desde manchetes densas a micro-legendas, e um código cromático estrutural que identificava cada secção editorial (vermelho para Notícias, verde para Desporto, azul para Opinião)."
+          "content": "Em setembro de 2005, sob a direção criativa de Mark Porter, o jornal passou para o formato Berliner, intermédio entre o broadsheet e o tabloide. A tipografia foi desenhada por Christian Schwartz e Paul Barnes. O projeto trouxe uma grelha modular rigorosa, uma família tipográfica própria (Guardian Egyptian), que serve desde as manchetes às legendas mais pequenas, e uma cor para cada secção do jornal."
         },
         "N3": {
           "coord": "L1.N3",
-          "title": "Source — A Tradução Atómica (2019–Presente)",
+          "title": "Source: o sistema digital (2019–presente)",
           "tags": [
-            "Open Source",
+            "Open source",
             "React",
             "Figma"
           ],
-          "content": "O Source é o sistema de design digital do The Guardian, criado para unificar o trabalho das equipas de produto, design e engenharia. A sua função primordial foi traduzir a linguagem visual e autoral do jornal impresso numa biblioteca viva de componentes reutilizáveis, assegurando consistência entre o portal web e as aplicações móveis."
+          "content": "O Source é o design system digital do The Guardian. Foi criado para juntar o trabalho das equipas de produto, design e engenharia. Traduz a linguagem visual do jornal impresso para uma biblioteca de componentes reutilizáveis, que garante consistência entre o site e as aplicações móveis."
         },
         "N4": {
           "coord": "L1.N4",
-          "title": "Financiamento pelos Leitores e Independência Editorial",
+          "title": "Financiado pelos leitores",
           "tags": [
             "Scott Trust",
-            "Reader Revenue",
-            "Sem Paywall Rígida"
+            "Receita dos leitores",
+            "Sem paywall"
           ],
-          "content": "Governado pelo Scott Trust, o jornal recusou fechar o seu conteúdo atrás de uma paywall tradicional, defendendo o acesso aberto à informação verificada num período marcado pelo Brexit e pela desinformação digital. Para sobreviver financeiramente, o sistema Source teve de aperfeiçoar componentes de apelo à contribuição voluntária (epics e banners de suporte) que gerassem conversão económica sem comprometer a leitura nem a credibilidade jornalística."
+          "content": "O jornal é gerido pelo Scott Trust e recusou ter uma paywall tradicional. Defende o acesso aberto a informação verificada, numa altura marcada pelo Brexit e pela desinformação. Para se financiar, o Source teve de aperfeiçoar os componentes que pedem contribuições voluntárias (epics e banners de apoio), sem prejudicar a leitura nem a credibilidade."
         },
         "N5": {
           "coord": "L1.N5",
-          "title": "Inclusão Democrática, RGPD e WCAG 2.1 AA",
+          "title": "Acessibilidade, RGPD e WCAG 2.1 AA",
           "tags": [
             "WCAG 2.1 AA",
             "RGPD",
-            "Contraste Luminoso"
+            "Contraste"
           ],
-          "content": "A premissa do jornalismo aberto exige que a interface não crie barreiras a leitores com limitações visuais, motoras ou cognitivas. O Source incorpora nativamente os critérios WCAG 2.1 AA, o que obrigou a recalibrar as cores históricas do papel — que falhavam frequentemente nos testes de contraste em ecrãs retroiluminados — para novas tonalidades digitalmente seguras."
+          "content": "O jornalismo aberto não pode ter barreiras para quem tem limitações visuais, motoras ou cognitivas. O Source cumpre de raiz os critérios WCAG 2.1 AA. Por isso foi preciso ajustar as cores históricas do papel, que muitas vezes não passavam nos testes de contraste em ecrãs retroiluminados."
         },
         "N6": {
           "coord": "L1.N6",
-          "title": "Design Tokens e a Doutrina dos Cinco Pilares",
+          "title": "Design tokens e os cinco pilares",
           "tags": [
             "Atomic Design",
-            "Theming",
-            "Cinco Pilares"
+            "Temas",
+            "Cinco pilares"
           ],
-          "content": "Para gerir dezenas de variações de layout sem duplicar folhas de estilo, a equipa transformou as antigas cores de secção impressas num motor de theming sustentado por Design Tokens. Organizado em torno de cinco pilares editoriais (News, Opinion, Sport, Culture, Lifestyle), o sistema permite que o mesmo componente de código mude automaticamente a cor do filete, do título e do fundo conforme a secção onde é publicado."
+          "content": "Para gerir dezenas de variações de layout sem duplicar folhas de estilo, a equipa transformou as cores de secção do papel em design tokens. O sistema tem cinco pilares editoriais (News, Opinion, Sport, Culture, Lifestyle). O mesmo componente muda sozinho a cor do filete, do título e do fundo consoante a secção onde está."
         },
         "N7": {
           "coord": "L1.N7",
-          "title": "Cartões Modulares e Tipografia Guardian Headline",
+          "title": "Cartões modulares e Guardian Headline",
           "tags": [
             "Article Card",
-            "Hierarquia Editorial",
-            "Pillar Tokens"
+            "Hierarquia",
+            "Tokens de pilar"
           ],
-          "content": "O sistema apoia-se numa grelha fluida e na evolução tipográfica para a Guardian Headline e Guardian Text Egyptian. Nos componentes de notícia (Article Cards), a distinção entre facto noticioso e texto de opinião é imediata: os artigos de opinião utilizam fundos em tom pastel suave, assinatura destacada do colunista e um glifo de aspas sobredimensionado na cor do pilar respetivo.",
+          "content": "O sistema usa uma grelha fluida e as tipografias Guardian Headline e Guardian Text Egyptian. Nos cartões de notícia (Article Cards), distingue-se logo um facto de uma opinião: os artigos de opinião têm fundo em tom pastel, a assinatura do colunista em destaque e umas aspas grandes na cor do pilar.",
           "witnessComponent": {
             "type": "guardian-pillar-card",
             "interactiveFeatures": [
@@ -262,77 +262,77 @@ window.MATRIX_DATA = {
       "systemName": "BBC GEL (Global Experience Language)",
       "country": "Reino Unido",
       "period": "1997 (Print/TV) / 2010–Presente (GEL)",
-      "archetype": "Serviço Público Universal e Padrão de Acessibilidade",
+      "archetype": "Serviço público e acessibilidade",
       "nodes": {
         "N1": {
           "coord": "L2.N1",
-          "title": "Do Monopólio da Radiodifusão à Identidade Unificada (1960–1997)",
+          "title": "Uma identidade para vários canais (1960–1997)",
           "tags": [
-            "Serviço Público",
+            "Serviço público",
             "Radio Times",
             "Lambie-Nairn"
           ],
-          "content": "Embora a sua matriz seja audiovisual (complementada por publicações históricas como a revista Radio Times), a BBC enfrentou durante décadas o desafio de unificar múltiplos canais de televisão, estações de rádio e serviços internacionais sob uma chancela pública coerente. Os manuais de identidade impressos de Abram Games e a histórica revisão de Martin Lambie-Nairn em 1997 consolidaram o rigor visual da instituição antes da transição digital."
+          "content": "A BBC é sobretudo audiovisual, mas também publicou revistas como a Radio Times. Durante décadas teve de unir vários canais de televisão, estações de rádio e serviços internacionais sob uma só imagem pública. Os manuais de identidade de Abram Games e a revisão de Martin Lambie-Nairn, em 1997, reforçaram o rigor visual antes da passagem ao digital."
         },
         "N2": {
           "coord": "L2.N2",
-          "title": "Manuais Corporativos e a Hegemonia da Gill Sans",
+          "title": "Manuais impressos e Gill Sans",
           "tags": [
             "Gill Sans",
-            "Sinalética Editorial",
-            "Fragmentação Web"
+            "Sinalética",
+            "Web fragmentada"
           ],
-          "content": "Os manuais físicos da BBC ditavam regras estritas para o uso da tipografia humanista Gill Sans, grelhas de papelaria e grafismos de ecrã. Porém, com a expansão rápida da BBC Online a partir de finais dos anos 90, cada departamento passou a desenhar páginas web de forma autónoma, originando dezenas de interfaces incompatíveis entre si."
+          "content": "Os manuais da BBC fixavam regras estritas para a tipografia humanista Gill Sans, a papelaria e os grafismos de ecrã. Mas com o crescimento da BBC Online, a partir do fim dos anos 90, cada departamento fez as suas páginas por conta própria. O resultado foram dezenas de interfaces incompatíveis."
         },
         "N3": {
           "coord": "L2.N3",
-          "title": "BBC GEL — O Pioneiro dos Sistemas Digitais (2010–Presente)",
+          "title": "BBC GEL: um dos primeiros (2010–presente)",
           "tags": [
             "Ben Gammon",
-            "Pioneiro Web",
+            "Pioneiro",
             "2010"
           ],
-          "content": "Lançado em 2010 sob a direção de design de Ben Gammon e Bronwenovan, o Global Experience Language (GEL) foi um dos primeiros sistemas de design digitais documentados à escala global, antecedendo em vários anos o Material Design da Google. O GEL estabeleceu grelhas partilhadas e padrões de interação para unificar serviços tão distintos como o BBC News, BBC Sport, iPlayer e plataformas educativas."
+          "content": "O Global Experience Language (GEL) foi lançado em 2010, com direção de design de Ben Gammon. Foi um dos primeiros design systems digitais documentados à escala global, vários anos antes do Material Design da Google. Criou grelhas partilhadas e padrões de interação para unir serviços tão diferentes como o BBC News, o BBC Sport, o iPlayer e as plataformas educativas."
         },
         "N4": {
           "coord": "L2.N4",
-          "title": "A Royal Charter e o Financiamento por Taxa Pública",
+          "title": "Financiada pela taxa pública",
           "tags": [
-            "Licence Fee",
+            "Licence fee",
             "Imparcialidade",
-            "Zero Dark Patterns"
+            "Sem dark patterns"
           ],
-          "content": "Financiada diretamente pelos cidadãos britânicos e regulada por uma Carta Real (Royal Charter) que impõe imparcialidade e serviço universal, a BBC não compete por cliques comerciais da mesma forma que os media privados. Este enquadramento proíbe o uso de dark patterns de retenção e exige ao GEL uma sobriedade institucional absoluta e uma reutilização eficiente de recursos técnicos públicos."
+          "content": "A BBC é financiada pelos cidadãos britânicos e regulada por uma Royal Charter, que impõe imparcialidade e serviço universal. Não compete por cliques como os media privados. Por isso não pode usar dark patterns para reter utilizadores, e o GEL tem de ser sóbrio e reutilizar bem os recursos técnicos públicos."
         },
         "N5": {
           "coord": "L2.N5",
-          "title": "A Referência Mundial em Acessibilidade (Equality Act 2010)",
+          "title": "Referência em acessibilidade (Equality Act 2010)",
           "tags": [
             "WCAG AAA/AA",
             "Equality Act",
-            "Inclusão Total"
+            "Inclusão"
           ],
-          "content": "Sob o princípio de que um serviço pago por todos tem de ser utilizável por todos, o BBC GEL redigiu normas técnicas de acessibilidade que se tornaram referência mundial. Todos os componentes são projetados de raiz para leitores de ecrã, navegação exclusiva por teclado, utilizadores com dislexia, daltonismo ou limitações motoras severas, tratando a acessibilidade como ponto de partida criativo."
+          "content": "Um serviço pago por todos tem de ser utilizável por todos. Seguindo este princípio, o GEL escreveu normas de acessibilidade que se tornaram referência mundial. Todos os componentes são pensados desde o início para leitores de ecrã, navegação só com teclado e pessoas com dislexia, daltonismo ou limitações motoras graves. A acessibilidade é o ponto de partida."
         },
         "N6": {
           "coord": "L2.N6",
-          "title": "Grelha Elástica de 8px/16px e Tipografia BBC Reith",
+          "title": "Grelha de 8px/16px e BBC Reith",
           "tags": [
             "BBC Reith",
             "Dalton Maag",
-            "Performance Global"
+            "Desempenho"
           ],
-          "content": "Para servir desde ecrãs 4K em Londres até telemóveis de baixo custo em redes 2G através do BBC World Service, o sistema adotou uma grelha altamente leve baseada em múltiplos de 8px e 16px. Em 2017, a BBC abandonou a antiga Gill Sans e a Arial em favor da família proprietária BBC Reith (desenhada pela Dalton Maag), otimizada para leitura rápida em ecrãs pequenos e suporte a múltiplos alfabetos."
+          "content": "Para servir desde ecrãs 4K em Londres até telemóveis baratos com redes 2G, através do BBC World Service, o sistema usa uma grelha leve baseada em múltiplos de 8px e 16px. Em 2017, a BBC deixou a Gill Sans e a Arial e passou a usar a BBC Reith, desenhada pela Dalton Maag. É uma fonte própria, pensada para leitura rápida em ecrãs pequenos e para vários alfabetos."
         },
         "N7": {
           "coord": "L2.N7",
-          "title": "Escala Tipográfica Histórica e Áreas de Toque",
+          "title": "Escala tipográfica e áreas de toque",
           "tags": [
             "Canon & Trafalgar",
-            "Touch Target 44px",
+            "Área de toque 44px",
             "Semântica"
           ],
-          "content": "O GEL batizou os níveis da sua escala tipográfica com nomes da tipografia clássica inglesa (Canon, Trafalgar, Paragon, Double Pica, Great Primer, Body Copy, Brevier), fazendo variar os tamanhos automaticamente conforme o breakpoint do dispositivo. Na interface da BBC News, os blocos noticiosos destacam-se pelo espaçamento generoso, ausência de ruído decorativo e áreas de toque mínimas de 44×44px.",
+          "content": "Os níveis da escala tipográfica do GEL têm nomes da tipografia clássica inglesa (Canon, Trafalgar, Paragon, Double Pica, Great Primer, Body Copy, Brevier) e os tamanhos ajustam-se ao dispositivo. No BBC News, as notícias distinguem-se pelo espaçamento generoso, pela falta de decoração e por áreas de toque de, pelo menos, 44×44px.",
           "witnessComponent": {
             "type": "bbc-gel-anatomy",
             "interactiveFeatures": [
@@ -351,77 +351,77 @@ window.MATRIX_DATA = {
       "systemName": "Origami / FT Design System",
       "country": "Reino Unido / Global",
       "period": "1893 (FT Pink) / 2013–Presente (Origami)",
-      "archetype": "Modularidade Extrema e Jornalismo de Dados",
+      "archetype": "Módulos e jornalismo de dados",
       "nodes": {
         "N1": {
           "coord": "L3.N1",
-          "title": "A Imprensa Financeira Londrina e o Papel Salmão (1888–1893)",
+          "title": "O papel salmão do FT (1888–1893)",
           "tags": [
             "FT Pink",
             "1893",
-            "Diferenciação Visual"
+            "Diferenciação"
           ],
-          "content": "Fundado em 1888, o Financial Times tomou em 1893 uma decisão gráfica e comercial histórica: passar a imprimir o jornal em papel tingido num tom salmão pálido (FT Pink). Inicialmente uma medida para reduzir custos de branqueamento do papel e distinguir imediatamente o jornal do seu rival Financial News nas bancas de Londres, a cor tornou-se o símbolo global de jornalismo económico de referência."
+          "content": "O Financial Times foi fundado em 1888. Em 1893 passou a imprimir em papel cor de salmão (FT Pink). Foi uma forma de reduzir os custos de branqueamento do papel e de distinguir o jornal do rival Financial News nas bancas de Londres. A cor tornou-se o símbolo do jornalismo económico."
         },
         "N2": {
           "coord": "L3.N2",
-          "title": "Engenharia Tabelar e Densidade Estatística",
+          "title": "Tabelas e muita informação por página",
           "tags": [
-            "Cotações de Bolsa",
-            "Tipografia Condensada",
-            "Filetes Finos"
+            "Cotações",
+            "Tipografia condensada",
+            "Filetes finos"
           ],
-          "content": "Ao contrário dos diários generalistas, a tradição impressa do FT exigiu uma arquitetura gráfica capaz de organizar páginas inteiras de cotações bolsistas, tabelas numéricas microscópicas e gráficos financeiros ao lado de artigos de fundo. O jornal aperfeiçoou o uso de grelhas de colunas estreitas, filetes divisórios precisos (hairlines) e tipografias condensadas de alta legibilidade numérica."
+          "content": "O FT tinha de organizar páginas inteiras de cotações da bolsa, tabelas com números pequenos e gráficos financeiros ao lado de artigos de fundo. Para isso aperfeiçoou grelhas de colunas estreitas, filetes finos (hairlines) e tipos condensados fáceis de ler em números."
         },
         "N3": {
           "coord": "L3.N3",
-          "title": "Origami e evolução para FT Design System (2013–Presente)",
+          "title": "Origami e FT Design System (2013–presente)",
           "tags": [
             "Origami",
-            "Modularidade",
+            "Módulos",
             "GitHub"
           ],
-          "content": "Criado por volta de 2013 pela equipa de engenharia e design do jornal, o Origami foi um dos primeiros sistemas de design verdadeiramente modulares da imprensa mundial. Concebido como uma coleção de componentes independentes e versionados, permitiu unificar o portal noticioso, as ferramentas de análise de mercados e as aplicações internas da redação."
+          "content": "O Origami foi criado por volta de 2013 pela equipa de engenharia e design do jornal. Foi um dos primeiros design systems verdadeiramente modulares da imprensa. É uma coleção de componentes independentes e versionados, usados no site de notícias, nas ferramentas de análise de mercados e nas aplicações internas da redação."
         },
         "N4": {
           "coord": "L3.N4",
-          "title": "Paywall Pioneira e Soberania Tecnológica face à Apple",
+          "title": "Paywall pioneira e rutura com a Apple",
           "tags": [
             "Subscrição B2B",
-            "HTML5 Web App",
-            "Paywall Metered"
+            "Web App HTML5",
+            "Paywall medida"
           ],
-          "content": "O FT foi pioneiro na introdução de um modelo de subscrição digital medido por consumo (metered paywall, 2007). Em 2011, protagonizou um momento histórico ao retirar a sua aplicação da App Store da Apple para não ceder 30% das receitas nem perder os dados dos seus leitores, apostando numa Web App avançada em HTML5 — decisão que exigiu um sistema de componentes ultrarrápido e consistente no navegador."
+          "content": "O FT foi pioneiro na subscrição digital medida por consumo (metered paywall, 2007). Em 2011 retirou a sua aplicação da App Store da Apple para não ceder 30% das receitas nem os dados dos leitores, e apostou numa Web App em HTML5. Isso exigiu um sistema de componentes rápido e consistente no navegador."
         },
         "N5": {
           "coord": "L3.N5",
-          "title": "Ergonomia Visual em Leitura Intensiva e WCAG",
+          "title": "Leitura prolongada e WCAG",
           "tags": [
-            "Fadiga Ocular",
+            "Cansaço visual",
             "#FFF1E5",
-            "Contraste Calculado"
+            "Contraste"
           ],
-          "content": "Os subscritores do FT (analistas financeiros, decisores políticos, gestores) leem relatórios longos e tabelas densas durante horas. A transposição da cor salmão do papel para o fundo digital (#FFF1E5) revelou uma vantagem ergonómica: reduz o encandeamento luminoso do branco puro (#FFFFFF). Para cumprir as normas WCAG 2.1 AA/AAA sobre um fundo colorido, toda a paleta de texto e infografia foi matematicamente calibrada."
+          "content": "Os subscritores do FT (analistas, decisores políticos, gestores) leem relatórios longos e tabelas densas durante horas. Ao passar o salmão do papel para o fundo digital (#FFF1E5), o FT ganhou conforto: encandeia menos do que o branco puro (#FFFFFF). Para cumprir a WCAG 2.1 AA/AAA sobre um fundo colorido, toda a paleta de texto e gráficos foi calculada para ter contraste suficiente."
         },
         "N6": {
           "coord": "L3.N6",
-          "title": "Pacotes Independentes e o FT Visual Vocabulary",
+          "title": "Pacotes independentes e Visual Vocabulary",
           "tags": [
-            "Micro-Frontends",
+            "Micro-frontends",
             "Visual Vocabulary",
             "Core Web Vitals"
           ],
-          "content": "Num produto de subscrição de alto valor, a velocidade de carregamento retém assinantes. O Origami permite carregar apenas o código estritamente necessário em cada vista. Em paralelo, a equipa de dados criou o FT Visual Vocabulary, uma extensão do sistema de design que codifica regras visuais e de código para mais de 70 tipologias de gráficos estatísticos."
+          "content": "Num produto de subscrição caro, a rapidez de carregamento ajuda a manter assinantes. O Origami permite carregar só o código necessário em cada página. A equipa de dados criou também o FT Visual Vocabulary, que define regras visuais e de código para mais de 70 tipos de gráficos estatísticos."
         },
         "N7": {
           "coord": "L3.N7",
-          "title": "Tipografia Financier, Metric e Infografia Padronizada",
+          "title": "Financier, Metric e infografia",
           "tags": [
             "Kris Sowersby",
             "Financier Display",
             "Infografia"
           ],
-          "content": "A identidade visual combina a autoridade clássica da serifada Financier Display (desenhada por Kris Sowersby) com a precisão geométrica da Metric para dados, tabelas e navegação. Nos artefactos visuais destacam-se a superfície em tom Paper (#FFF1E5), os botões de acompanhamento de tópicos (myFT) e a grelha rigorosa dos gráficos financeiros.",
+          "content": "A identidade junta a autoridade da serifada Financier Display (de Kris Sowersby) com a precisão da Metric, usada em dados, tabelas e navegação. Destacam-se o fundo Paper (#FFF1E5), os botões para seguir tópicos (myFT) e a grelha rigorosa dos gráficos financeiros.",
           "witnessComponent": {
             "type": "ft-origami-card",
             "interactiveFeatures": [
@@ -440,77 +440,77 @@ window.MATRIX_DATA = {
       "systemName": "Ink Design System",
       "country": "Estados Unidos",
       "period": "Século XX (Print) / 2018–Presente (Ink)",
-      "archetype": "Equilíbrio entre Produto Sistematizado e Direção de Arte Bespoke",
+      "archetype": "Sistema e direção de arte à medida",
       "nodes": {
         "N1": {
           "coord": "L4.N1",
-          "title": "A Autoridade Textual da 'Gray Lady' no Século XX",
+          "title": "A 'Gray Lady' no século XX",
           "tags": [
-            "Jornal de Registo",
+            "Jornal de referência",
             "Cheltenham",
-            "Austeridade Visual"
+            "Sobriedade"
           ],
-          "content": "Durante grande parte do século XX, o The New York Times afirmou a sua autoridade como jornal de registo norte-americano através de uma primeira página austera, densa e quase exclusivamente textual, que lhe valeu o epíteto de The Gray Lady. Até finais da década de 1970, o jornal resistiu à cor e às grandes fotografias, confiando a hierarquia noticiosa ao contraste entre as famílias tipográficas Cheltenham, Bookman e Imperial."
+          "content": "Durante grande parte do século XX, o The New York Times afirmou-se como jornal de referência com uma primeira página sóbria, densa e quase só de texto. Por isso ganhou o apelido The Gray Lady. Até ao fim dos anos 1970 resistiu à cor e às grandes fotografias, e deixou a hierarquia das notícias ao contraste entre as famílias Cheltenham, Bookman e Imperial."
         },
         "N2": {
           "coord": "L4.N2",
-          "title": "A Revolução das Secções de Louis Silverstein e Tom Bodkin",
+          "title": "Louis Silverstein e os cadernos temáticos",
           "tags": [
             "Louis Silverstein",
             "Tom Bodkin",
             "Matthew Carter"
           ],
-          "content": "Nos anos 1970, o diretor de arte Louis Silverstein transformou o jornal ao criar cadernos temáticos diários (Science Times, Living), provando que uma grelha clássica de seis colunas podia acolher direção de arte arrojada e ilustração. Em 2003, sob direção de Tom Bodkin, o tipógrafo Matthew Carter redesenhou a NYT Cheltenham, dotando o jornal impresso de uma coesão tipográfica exemplar."
+          "content": "Nos anos 1970, o diretor de arte Louis Silverstein criou cadernos temáticos diários (Science Times, Living) e mostrou que uma grelha clássica de seis colunas aguentava direção de arte ousada e ilustração. Em 2003, com Tom Bodkin na direção, o tipógrafo Matthew Carter redesenhou a NYT Cheltenham, o que deu mais coesão tipográfica ao jornal impresso."
         },
         "N3": {
           "coord": "L4.N3",
-          "title": "Ink — Sistematizar sem Engessar a Direção de Arte (2018–Presente)",
+          "title": "Ink: sistema e criatividade (2018–presente)",
           "tags": [
             "Sistema Ink",
-            "Bespoke vs. Padrão",
-            "Escala Global"
+            "À medida vs. padrão",
+            "Escala global"
           ],
-          "content": "O NYT hesitou durante anos em impor um sistema de design único por receio de que a padronização anulasse a criatividade das suas grandes reportagens multimédia (como o histórico Snow Fall de 2012). O sistema Ink foi desenhado para resolver esta tensão: governa com rigor toda a arquitetura de leitura diária, navegação e conta de utilizador, mas deixa espaço aberto para peças de direção de arte à medida."
+          "content": "Durante anos o NYT hesitou em impor um sistema de design único, com medo de que a padronização matasse a criatividade das grandes reportagens multimédia, como o Snow Fall de 2012. O Ink resolve esta tensão: controla a leitura diária, a navegação e a conta de utilizador, mas deixa espaço para peças de direção de arte feitas à medida."
         },
         "N4": {
           "coord": "L4.N4",
-          "title": "A Estratégia de 'Bundle' e os 10 Milhões de Subscritores",
+          "title": "O bundle e os 10 milhões de assinantes",
           "tags": [
             "NYT Bundle",
-            "Games & Cooking",
-            "Retenção Diária"
+            "Games e Cooking",
+            "Hábito diário"
           ],
-          "content": "Perante a crise da publicidade programática, o NYT reinventou-se como uma plataforma de subscrições que ultrapassou os 10 milhões de assinantes pagos. O modelo económico assenta num pacote (bundle) que une o jornalismo diário a produtos de hábito quotidiano como o NYT Games (Wordle, Crossword), NYT Cooking, The Athletic e Wirecutter. O Ink garante que o leitor reconhece a chancela do Times em todas estas vertentes."
+          "content": "Com a crise da publicidade programática, o NYT passou a apostar nas subscrições e ultrapassou os 10 milhões de assinantes. O modelo assenta num pacote (bundle) que junta o jornalismo diário a produtos de hábito, como o NYT Games (Wordle, Crossword), o NYT Cooking, o The Athletic e o Wirecutter. O Ink garante que o leitor reconhece a marca do Times em todos eles."
         },
         "N5": {
           "coord": "L4.N5",
-          "title": "Fadiga Noticiosa, Dark Mode e Conformidade ADA",
+          "title": "Leitura noturna, modo escuro e ADA",
           "tags": [
-            "ADA Compliance",
-            "Dark Mode",
-            "Leitura Noturna"
+            "Conformidade ADA",
+            "Modo escuro",
+            "Leitura noturna"
           ],
-          "content": "A aplicação rigorosa da legislação norte-americana de acessibilidade (Americans with Disabilities Act - ADA) aos canais digitais e o hábito crescente de leitura noturna em dispositivos móveis moldaram o sistema. O Ink implementou uma arquitetura semântica de tokens de cor para suportar o Modo Escuro (Dark Mode) nativo, invertendo a relação histórica de tinta preta sobre papel branco sem perder legibilidade nem contraste."
+          "content": "A lei norte-americana de acessibilidade (Americans with Disabilities Act, ADA) aplica-se aos canais digitais, e cada vez mais pessoas leem de noite no telemóvel. Isto moldou o sistema. O Ink tem tokens de cor semânticos que suportam o modo escuro de forma nativa. Inverte a relação clássica de tinta preta em papel branco, sem perder legibilidade nem contraste."
         },
         "N6": {
           "coord": "L4.N6",
-          "title": "Sincronização de Tokens entre Web, iOS e Android",
+          "title": "Tokens sincronizados entre web, iOS e Android",
           "tags": [
             "Multiplataforma",
             "Swift / Kotlin / React",
-            "Single Source of Truth"
+            "Fonte única"
           ],
-          "content": "Ao contrário de outros jornais focados apenas na web, o NYT depende fortemente do desempenho das suas aplicações nativas iOS e Android. O desafio técnico central do Ink consistiu em ligar as bibliotecas de Figma a um pipeline de Design Tokens em JSON capaz de compilar automaticamente cores, espaçamentos e escalas tipográficas para React (Web), Swift (iOS) e Kotlin (Android)."
+          "content": "Ao contrário de jornais focados só na web, o NYT depende muito das aplicações nativas iOS e Android. O grande desafio técnico do Ink foi ligar as bibliotecas do Figma a um pipeline de design tokens em JSON, que compila automaticamente cores, espaçamentos e escalas tipográficas para React (web), Swift (iOS) e Kotlin (Android)."
         },
         "N7": {
           "coord": "L4.N7",
-          "title": "A Voz da Cheltenham, Imperial, Franklin e Karnak",
+          "title": "Cheltenham, Imperial, Franklin e Karnak",
           "tags": [
-            "Quatro Famílias",
+            "Quatro famílias",
             "Audio Player",
-            "Hierarquia Clássica"
+            "Hierarquia clássica"
           ],
-          "content": "A identidade visual repousa na orquestração de quatro famílias tipográficas: NYT Cheltenham (manchetes noticiosas), NYT Imperial (corpo de texto longo), NYT Franklin (interface, legendas e infografia) e NYT Karnak (títulos de impacto e sub-marcas). Nos componentes de artigo destacam-se a integração limpa de players de áudio para ouvir a notícia e os módulos de transição suave entre informação e estilo de vida.",
+          "content": "A identidade usa quatro famílias tipográficas: NYT Cheltenham (manchetes), NYT Imperial (texto corrido), NYT Franklin (interface, legendas e infografia) e NYT Karnak (títulos de impacto e sub-marcas). Nos componentes de artigo destacam-se os players de áudio para ouvir a notícia e os módulos de transição entre informação e estilo de vida.",
           "witnessComponent": {
             "type": "nyt-ink-card",
             "interactiveFeatures": [
@@ -529,77 +529,77 @@ window.MATRIX_DATA = {
       "systemName": "NewsKit Design System",
       "country": "Reino Unido",
       "period": "1785 & 1964 (Print) / 2020–Presente (NewsKit)",
-      "archetype": "Arquitetura White-Label e Multi-Marca para Grupos de Media",
+      "archetype": "Uma base para várias marcas",
       "nodes": {
         "N1": {
           "coord": "L5.N1",
-          "title": "O Antagonismo Histórico entre Broadsheet e Tabloid",
+          "title": "Broadsheet contra tabloide",
           "tags": [
             "The Times 1785",
             "The Sun 1964",
             "Stanley Morison"
           ],
-          "content": "No universo impresso do grupo News UK, as suas publicações históricas ocupavam pólos opostos da cultura britânica: de um lado, o The Times (1785), berço da célebre tipografia Times New Roman criada por Stanley Morison em 1931 e símbolo de sobriedade institucional; do outro, o The Sun (1964), arquétipo do tabloide popular de manchetes garrafais em caixa alta e fundos vermelhos vibrantes."
+          "content": "No papel, os títulos do grupo News UK ocupavam polos opostos da cultura britânica. De um lado, o The Times (1785), onde nasceu a Times New Roman, criada por Stanley Morison em 1931, e símbolo de sobriedade. Do outro, o The Sun (1964), tabloide popular de manchetes enormes em maiúsculas e fundos vermelhos vivos."
         },
         "N2": {
           "coord": "L5.N2",
-          "title": "Silos Editoriais e Infraestruturas Incompatíveis",
+          "title": "Silos e sistemas incompatíveis",
           "tags": [
-            "Silos Técnicos",
-            "Estéticas Opostas",
-            "Pré-Unificação"
+            "Silos técnicos",
+            "Estéticas opostas",
+            "Antes da unificação"
           ],
-          "content": "Durante toda a era analógica e nas primeiras duas décadas da internet, a distância estética, editorial e demográfica entre estes títulos determinava que cada jornal operasse em absoluto isolamento técnico. Não existia qualquer partilha de grelhas, regras de paginação ou ferramentas entre a redação clássica do Sunday Times e a paginação febril do The Sun."
+          "content": "Durante a era analógica e as duas primeiras décadas da internet, a distância estética, editorial e de público entre estes jornais fazia com que cada um trabalhasse isolado. Não havia grelhas, regras de paginação ou ferramentas partilhadas entre a redação clássica do Sunday Times e a do The Sun."
         },
         "N3": {
           "coord": "L5.N3",
-          "title": "NewsKit — Arquitetura White-Label (2020–Presente)",
+          "title": "NewsKit: uma base para várias marcas (2020–presente)",
           "tags": [
-            "Multi-Brand",
-            "White-Label",
-            "Open Documentation"
+            "Multimarca",
+            "White-label",
+            "Documentação aberta"
           ],
-          "content": "Desenvolvido pela equipa central da News UK, o NewsKit é um dos exemplos mais avançados do mundo de um Design System Multi-Marca para grupos de comunicação social. A sua premissa foi construir uma biblioteca única de componentes funcionais e acessíveis (galerias, players de áudio/vídeo, cartões de artigos, formulários de subscrição) desprovida de estilo fixo, pronta a ser 'vestida' por qualquer jornal ou rádio do grupo."
+          "content": "O NewsKit foi desenvolvido pela equipa central da News UK e é dos exemplos mais completos de design system multimarca para um grupo de media. A ideia foi criar uma só biblioteca de componentes funcionais e acessíveis (galerias, players de áudio e vídeo, cartões de artigos, formulários de subscrição), sem estilo próprio, pronta a ser 'vestida' por qualquer jornal ou rádio do grupo."
         },
         "N4": {
           "coord": "L5.N4",
-          "title": "Consolidação de Grupos de Media e Eficiência de Custos",
+          "title": "Menos custos com a consolidação do grupo",
           "tags": [
-            "Economia de Escala",
-            "Redução de Silos",
-            "Rádio & Imprensa"
+            "Economia de escala",
+            "Menos silos",
+            "Rádio e imprensa"
           ],
-          "content": "Nos grandes conglomerados de media contemporâneos, manter cinco equipas de engenharia separadas a programar cinco reprodutores de vídeo ou cinco fluxos de pagamento funcionalmente idênticos tornou-se financeiramente incomportável. O NewsKit responde a uma racionalidade económica de grupo: desenvolver e testar a engenharia de cada componente uma única vez e distribuí-la por dez marcas editoriais distintas."
+          "content": "Num grande grupo de media, manter cinco equipas de engenharia a programar cinco players de vídeo ou cinco fluxos de pagamento iguais deixou de compensar. O NewsKit segue uma lógica económica de grupo: cada componente é desenvolvido e testado uma só vez e distribuído por dez marcas."
         },
         "N5": {
           "coord": "L5.N5",
-          "title": "Conformidade Legal e Acessibilidade Centralizada",
+          "title": "Acessibilidade e conformidade legal centralizadas",
           "tags": [
-            "EAA Compliance",
+            "EAA",
             "WCAG 2.2",
-            "Gestão de Risco"
+            "Gestão de risco"
           ],
-          "content": "Perante o aperto regulamentar europeu e britânico em matéria de privacidade e acessibilidade digital, atualizar dezenas de portais legados em simultâneo representava um risco jurídico elevado. Com o NewsKit, a navegação por teclado, os atributos semânticos ARIA e os estados de foco visíveis residem no código-base do componente: corrigir um critério de acessibilidade no núcleo atualiza automaticamente todas as publicações do grupo."
+          "content": "Com regras europeias e britânicas mais apertadas sobre privacidade e acessibilidade, atualizar dezenas de sites antigos ao mesmo tempo era um risco jurídico elevado. No NewsKit, a navegação por teclado, os atributos ARIA e os estados de foco visíveis estão no código do próprio componente. Corrigir um critério de acessibilidade no núcleo atualiza todas as publicações do grupo."
         },
         "N6": {
           "coord": "L5.N6",
-          "title": "Engenharia de Design Tokens em Três Camadas",
+          "title": "Design tokens em três camadas",
           "tags": [
             "Foundations",
-            "Semantic Tokens",
-            "Component Tokens"
+            "Tokens semânticos",
+            "Tokens de componente"
           ],
-          "content": "Construído em React e sincronizado com o Figma, o NewsKit separa radicalmente a estrutura da expressão visual através de um motor de Theming. Ao organizar os Design Tokens em camadas (globais, semânticos e de componente), o sistema permite alterar não apenas a cor e a tipografia, mas também a densidade espacial, os raios de borda (border-radius) e o peso dos filetes entre uma marca austera e uma marca de entretenimento."
+          "content": "O NewsKit é feito em React e sincronizado com o Figma. Separa a estrutura da aparência através de um sistema de temas. Os design tokens estão organizados em camadas (globais, semânticos e de componente). Assim, entre uma marca sóbria e uma de entretenimento, mudam a cor e a tipografia, mas também a densidade do espaço, os cantos arredondados (border-radius) e a espessura dos filetes."
         },
         "N7": {
           "coord": "L5.N7",
-          "title": "O Componente Camaleão (The Times vs. The Sun)",
+          "title": "O mesmo componente, duas identidades",
           "tags": [
-            "Mesmo Código",
-            "Duas Identidades",
-            "Prova Visual"
+            "Mesmo código",
+            "Duas identidades",
+            "Prova visual"
           ],
-          "content": "O poder desta arquitetura fica evidente ao colocar lado a lado o mesmo componente de código (como um Audio Player ou um Breaking News Card): quando alimentado pelo tema do The Times, exibe a tipografia serifada Times Modern, cantos retos a 0px e tons neutros; quando recebe o tema do The Sun ou da Virgin Radio, assume tipografias sem serifa pesadas, cantos arredondados e paletas de saturação elevada.",
+          "content": "O poder desta arquitetura vê-se ao colocar lado a lado o mesmo componente (um Audio Player ou um Breaking News Card). Com o tema do The Times, tem tipografia serifada Times Modern, cantos retos (0px) e tons neutros. Com o tema do The Sun ou da Virgin Radio, tem tipos sem serifa pesados, cantos arredondados e cores muito saturadas.",
           "witnessComponent": {
             "type": "newskit-chameleon-card",
             "interactiveFeatures": [
@@ -613,81 +613,81 @@ window.MATRIX_DATA = {
     {
       "rowId": "L6",
       "order": 6,
-      "entity": "Público (Caso de Estudo Nacional)",
-      "systemName": "Sistemas Editoriais no Panorama Português",
+      "entity": "Público (caso português)",
+      "systemName": "Sistemas editoriais em Portugal",
       "country": "Portugal",
       "period": "1990 / 2006 (Print) / 2014–Presente (Digital)",
-      "archetype": "Mercados de Escala Intermédia e Diagnóstico para Projeto Prático",
+      "archetype": "Redação de média dimensão",
       "nodes": {
         "N1": {
           "coord": "L6.N1",
-          "title": "A Modernização da Imprensa Portuguesa (1990–2005)",
+          "title": "O nascimento do Público (1990)",
           "tags": [
             "Portugal",
             "1990",
-            "Imprensa Europeia"
+            "Imprensa europeia"
           ],
-          "content": "Fundado em 1990 sob a liderança de Vicente Jorge Silva, o Público nasceu com uma forte cultura visual e fotográfica, rompendo com o grafismo pesado da imprensa portuguesa das décadas anteriores. Inspirado em referências europeias como o Libération e o El País, o jornal afirmou-se desde o primeiro número pelo rigor da sua paginação, uso da infografia e valorização da fotografia de autor."
+          "content": "O Público foi fundado em 1990, com Vicente Jorge Silva na direção. Nasceu com uma forte cultura visual e fotográfica, em rutura com o grafismo pesado da imprensa portuguesa anterior. Inspirou-se em jornais europeus como o Libération e o El País e destacou-se desde o primeiro número pela paginação rigorosa, pela infografia e pela fotografia de autor."
         },
         "N2": {
           "coord": "L6.N2",
-          "title": "Os Redesenhos de Mark Porter (2006 / 2015) e a Tipografia Nacional",
+          "title": "Mark Porter (2006 / 2015) e a tipografia portuguesa",
           "tags": [
             "Mark Porter",
             "Mário Feliciano",
             "Christian Schwartz"
           ],
-          "content": "Em 2006, o Público convidou o estúdio britânico de Mark Porter (autor do redesenho do The Guardian no ano anterior) para reformular a sua edição impressa, estabelecendo uma ligação direta entre o caso de estudo português e a escola modular anglo-saxónica. Este percurso consolidou também o prestígio da tipografia portuguesa contemporânea, com a criação da família Público (por Christian Schwartz, Paul Barnes e Mário Feliciano) e o uso da Flama de Mário Feliciano."
+          "content": "Em 2006, o Público convidou o estúdio de Mark Porter, autor do redesenho do The Guardian no ano anterior, para renovar a edição impressa. Isto liga diretamente o caso português à escola modular britânica. O percurso reforçou também o prestígio da tipografia portuguesa, com a família Público (de Christian Schwartz, Paul Barnes e Mário Feliciano) e o uso da Flama, de Mário Feliciano."
         },
         "N3": {
           "coord": "L6.N3",
-          "title": "A Transição Digital em Mercados de Escala Intermédia (2014–Presente)",
+          "title": "O digital num mercado de média dimensão (2014–presente)",
           "tags": [
-            "Sistemas Internos",
-            "Web & Mobile",
-            "Escala Lusófona"
+            "Sistemas internos",
+            "Web e mobile",
+            "Mercado lusófono"
           ],
-          "content": "À semelhança dos restantes meios de comunicação social portugueses (como o Expresso ou o nativo digital Observador), o Público estruturou bibliotecas de componentes e guias de estilo internos para gerir o seu ecossistema digital, embora sem publicar documentação aberta ao estilo da BBC ou do Guardian. Este caso ilustra a realidade das redações de média dimensão, onde equipas enxutas procuram conciliar um legado gráfico de excelência com a velocidade do ciclo noticioso online."
+          "content": "Como outros media portugueses (o Expresso ou o Observador), o Público criou bibliotecas de componentes e guias de estilo internos para gerir o digital, mas sem publicar documentação aberta como a BBC ou o Guardian. Mostra a realidade das redações de média dimensão: equipas pequenas que tentam juntar um bom legado gráfico à rapidez do ciclo de notícias online."
         },
         "N4": {
           "coord": "L6.N4",
-          "title": "A Pressão Publicitária num Mercado Linguístico Reduzido",
+          "title": "Publicidade num mercado pequeno",
           "tags": [
-            "Modelo Híbrido",
-            "Paywall + Publicidade",
+            "Modelo híbrido",
+            "Paywall e publicidade",
             "CLS"
           ],
-          "content": "Num mercado com a dimensão demográfica de Portugal, o crescimento das assinaturas digitais (paywall) ainda coexiste com uma forte dependência da publicidade programática e de formatos comerciais de alto impacto. Esta realidade económica interfere diretamente na estabilidade do sistema de design: a grelha editorial é frequentemente posta à prova pela inserção de banners dinâmicos e vídeos que alteram o ritmo espacial da página (Cumulative Layout Shift)."
+          "content": "Num mercado do tamanho de Portugal, as assinaturas digitais (paywall) crescem, mas continuam a conviver com muita dependência de publicidade programática e de formatos comerciais de grande impacto. Isto afeta o sistema de design: a grelha editorial é posta à prova por banners dinâmicos e vídeos que mudam o ritmo da página (Cumulative Layout Shift)."
         },
         "N5": {
           "coord": "L6.N5",
-          "title": "O Decreto-Lei n.º 82/2022 e o European Accessibility Act (EAA)",
+          "title": "DL n.º 82/2022 e o European Accessibility Act",
           "tags": [
             "DL 82/2022",
             "EAA",
             "Auditoria WCAG"
           ],
-          "content": "Com o envelhecimento da população portuguesa e a entrada em vigor das exigências do European Accessibility Act (transposto para o direito nacional pelo Decreto-Lei n.º 82/2022), os media digitais nacionais enfrentam um desafio urgente de inclusão. A análise às interfaces jornalísticas portuguesas revela frequentemente lacunas de contraste luminoso em metadados (datas e autores em cinzento claro sobre fundo branco), áreas de toque reduzidas em mobile e falhas na navegação semântica por teclado."
+          "content": "Com o envelhecimento da população e a entrada em vigor do European Accessibility Act (transposto para Portugal pelo Decreto-Lei n.º 82/2022), os media digitais portugueses têm um desafio urgente de inclusão. A análise das interfaces jornalísticas portuguesas mostra muitas vezes pouco contraste nos metadados (datas e autores em cinzento-claro sobre branco), áreas de toque pequenas no telemóvel e falhas na navegação por teclado."
         },
         "N6": {
           "coord": "L6.N6",
-          "title": "A Tensão entre o CMS Editorial, Webviews e Performance",
+          "title": "CMS, scripts externos e desempenho",
           "tags": [
-            "CMS Editorial",
-            "Dívida Técnica",
+            "CMS",
+            "Dívida técnica",
             "Multicanal"
           ],
-          "content": "Nas redações nacionais, a sistematização visual debate-se frequentemente com a rigidez dos Sistemas de Gestão de Conteúdos (CMS) e com a sobreposição de scripts externos (módulos de comentários, redes sociais, métricas de audiência e gestão de consentimento). Esta arquitetura gera desafios na manutenção de uma fonte única de Design Tokens que garanta exatamente o mesmo comportamento tipográfico entre o navegador web e as aplicações móveis."
+          "content": "Nas redações portuguesas, a sistematização visual choca muitas vezes com a rigidez dos sistemas de gestão de conteúdos (CMS) e com os scripts externos acumulados (comentários, redes sociais, métricas de audiência, consentimento). Isto dificulta manter uma fonte única de design tokens que garanta o mesmo comportamento tipográfico no navegador e nas aplicações móveis."
         },
         "N7": {
           "coord": "L6.N7",
-          "title": "A Serifada Público, o Vermelho Institucional e a Oportunidade de Investigação",
+          "title": "Tipografia Público, vermelho e a lacuna a investigar",
           "tags": [
-            "Diagnóstico Crítico",
+            "Diagnóstico",
             "Tipografia Público",
-            "Lacuna de Investigação"
+            "Lacuna de investigação"
           ],
-          "content": "A identidade digital preserva a força autoral da tipografia serifada Público e o acento cromático no vermelho institucional. No contexto desta investigação de mestrado, a dissecação visual do Article Card e da página de artigo do panorama nacional funciona como diagnóstico empírico: permite identificar onde a herança tipográfica do papel precisa de ser apoiada por uma nova arquitetura de Design Tokens acessíveis (WCAG 2.2 AA) — justificando o projeto prático desta dissertação.",
+          "content": "A identidade digital mantém a tipografia serifada Público e o vermelho institucional como cor de destaque. Nesta investigação, a análise visual do Article Card e da página de artigo funciona como diagnóstico: mostra onde a herança tipográfica do papel precisa de uma nova arquitetura de design tokens acessíveis (WCAG 2.2 AA). É isto que justifica o projeto prático da dissertação.",
           "witnessComponent": {
             "type": "portuguese-media-audit-card",
             "interactiveFeatures": [
@@ -701,92 +701,90 @@ window.MATRIX_DATA = {
     {
       "rowId": "L7",
       "order": 7,
-      "entity": "Observador (Nativo Digital Nacional)",
-      "systemName": "Arquitetura Editorial Born-Digital & Áudio",
+      "entity": "Observador (nativo digital)",
+      "systemName": "Jornal digital com rádio",
       "country": "Portugal",
       "period": "2014–Presente (100% Digital)",
-      "archetype": "Nativo Digital de Grande Escala e Convergência Texto-Rádio",
+      "archetype": "Nascido no digital, com texto e rádio",
       "nodes": {
         "N1": {
           "coord": "L7.N1",
           "isBornDigitalPreHistory": true,
-          "title": "A Rutura com a Rotativa e a Crise da Imprensa Impressa (2013–2014)",
+          "title": "Sem papel desde o início (2014)",
           "tags": [
-            "Born-Digital",
-            "Pós-Troika",
-            "Zero Papel"
+            "Nativo digital",
+            "Pós-troika",
+            "Sem papel"
           ],
-          "content": "Fundado em maio de 2014, num momento em que a imprensa tradicional portuguesa atravessava uma severa contração económica e quebras históricas de vendas em banca, o Observador nasce de uma decisão estratégica radical: prescindir totalmente do papel. Ao eliminar os custos industriais de impressão e distribuição física, o jornal canalizou todo o investimento para uma redação desenhada em função dos fluxos digitais."
+          "content": "O Observador foi fundado em maio de 2014, quando a imprensa portuguesa vivia uma forte crise económica e quedas históricas nas vendas em banca. Nasceu de uma decisão radical: dispensar o papel. Sem custos de impressão e distribuição, o investimento foi todo para uma redação pensada para o digital."
         },
         "N2": {
           "coord": "L7.N2",
           "isBornDigitalPreHistory": true,
-          "title": "A Remediação da Autoridade Clássica sem Matriz Física",
+          "title": "Autoridade clássica sem passado impresso",
           "tags": [
-            "Remediação Visual",
-            "Autoridade Editorial",
-            "Tradição vs. Ecrã"
+            "Remediação",
+            "Autoridade editorial",
+            "Tradição e ecrã"
           ],
-          "content": "Embora não possuísse uma edição impressa prévia, o projeto gráfico inaugural do Observador recusou a estética efémera dos portais noticiosos dos anos 2000. Aplicando o conceito teórico de remediação (Bolter & Grusin), o jornal apropriou-se dos códigos visuais de autoridade da imprensa clássica — manchetes em tipografia serifada de forte contraste, uso generoso de espaço branco e filetes estruturais — projetando-os diretamente numa grelha web."
+          "content": "O Observador não tinha edição impressa antes, mas o primeiro projeto gráfico recusou a estética passageira dos portais noticiosos dos anos 2000. Com base no conceito de remediação (Bolter & Grusin), foi buscar os códigos de autoridade da imprensa clássica — manchetes serifadas de grande contraste, muito espaço em branco e filetes — e aplicou-os a uma grelha web."
         },
         "N3": {
           "coord": "L7.N3",
-          "title": "Sistema Nativo Responsive e Evolução Multicanal (2014–Presente)",
+          "title": "Responsive e multicanal (2014–presente)",
           "tags": [
-            "Mobile-First",
-            "Responsive Web Design",
-            "Ecossistema Próprio"
+            "Mobile-first",
+            "Responsive",
+            "Sistema próprio"
           ],
-          "content": "Ao nascer quatro anos após a formulação do Responsive Web Design por Ethan Marcotte, o sistema visual do Observador foi concebido de raiz para ecrãs fluidos e interação tátil. Ao longo de uma década, a sua biblioteca de componentes evoluiu de um jornal puramente textual para uma arquitetura que integra web, aplicações móveis nativas, newsletters temáticas e emissão radiofónica contínua."
+          "content": "O Observador nasceu quatro anos depois de Ethan Marcotte formular o Responsive Web Design, e o seu sistema visual foi pensado desde o início para ecrãs fluidos e toque. Ao longo de uma década, a biblioteca de componentes passou de um jornal só de texto para um conjunto que inclui web, aplicações móveis, newsletters temáticas e emissão de rádio contínua."
         },
         "N4": {
           "coord": "L7.N4",
-          "title": "Do Acesso Aberto ao Modelo Freemium e à Rádio Observador (2018–2019)",
+          "title": "Subscrição e Rádio Observador (2018–2019)",
           "tags": [
-            "Paywall Dinâmica",
+            "Paywall dinâmica",
             "Rádio Observador",
-            "Subscrição + Publicidade"
+            "Subscrição e publicidade"
           ],
-          "content": "O modelo de negócio atravessou duas grandes mutações que redefiniram a sua interface: a introdução do programa de assinaturas digitais em 2018 e o lançamento da Rádio Observador em 2019. O sistema de design teve de acomodar componentes de fecho comercial (módulos de subscrição e sinalética de artigos exclusivos) e transformar o cabeçalho e o rodapé da página em centros de controlo de áudio ao vivo e podcasts."
+          "content": "O modelo de negócio mudou duas vezes e isso alterou a interface: em 2018 chegaram as assinaturas digitais e em 2019 a Rádio Observador. O design system teve de incluir componentes comerciais (módulos de subscrição e sinais de artigos exclusivos) e transformar o cabeçalho e o rodapé em centros de controlo de áudio em direto e podcasts."
         },
         "N5": {
           "coord": "L7.N5",
-          "title": "Consumo Ubíquo, Fadiga de Interface e Conformidade WCAG / DL n.º 82/2022",
+          "title": "Ler e ouvir: acessibilidade e DL n.º 82/2022",
           "tags": [
-            "Leitura e Escuta",
-            "Sobrecarga Cognitiva",
+            "Leitura e escuta",
+            "Sobrecarga cognitiva",
             "Auditoria WCAG"
           ],
-          "content": "O público do Observador alterna entre a leitura rápida em mobilidade e a escuta prolongada de áudio. Do ponto de vista da usabilidade e da legislação nacional de acessibilidade (DL n.º 82/2022), esta riqueza funcional coloca desafios críticos: a coexistência de players de áudio fixos, notificações, banners de consentimento e formatos publicitários reduz a área útil de leitura em ecrãs móveis e exige um controlo rigoroso da ordem de foco por teclado (WCAG 2.4.3) e dos rácios de contraste do azul institucional."
+          "content": "O público do Observador alterna entre ler depressa em mobilidade e ouvir áudio durante muito tempo. Em termos de usabilidade e de lei de acessibilidade (DL n.º 82/2022), isto traz desafios sérios: players de áudio fixos, notificações, banners de consentimento e publicidade ocupam espaço de leitura no telemóvel. É preciso controlar bem a ordem de foco por teclado (WCAG 2.4.3) e os rácios de contraste do azul institucional."
         },
         "N6": {
           "coord": "L7.N6",
-          "title": "Componentização de Formatos Jornalísticos e Persistência de Estado",
+          "title": "Formatos jornalísticos como componentes",
           "tags": [
             "Liveblogs",
             "Explicadores",
-            "Persistent Audio UI"
+            "Player de áudio persistente"
           ],
-          "content": "Tecnicamente, o jornal destacou-se pela criação de templates e organismos editoriais fortemente sistematizados no seu CMS: os 'Explicadores' por pontos, os 'Fact-Checks' com selos visuais de verificação e os 'Ao Minuto' (liveblogs). Na camada front-end, o desafio central reside na persistência do reprodutor de áudio e na sincronização de componentes entre a versão web e as aplicações iOS e Android."
+          "content": "No CMS, o jornal criou templates e componentes editoriais muito sistematizados: os 'Explicadores' por pontos, os 'Fact-Checks' com selos de verificação e os 'Ao Minuto' (liveblogs). No front-end, o grande desafio é manter o player de áudio ativo ao navegar e sincronizar os componentes entre a web e as aplicações iOS e Android."
         },
         "N7": {
           "coord": "L7.N7",
-          "title": "Anatomia Real do Observador: Grelha da Home, Artigo com Áudio e Paywall Dinâmica",
+          "title": "Azul, serifada e o Card Híbrido",
           "tags": [
-            "Grelha Modular",
-            "Áudio & Podcast+",
-            "Paywall Freemium",
-            "Azul Observador"
+            "Azul Observador",
+            "Card multimédia",
+            "Diagnóstico comparativo"
           ],
-          "content": "A arquitetura visual do Observador articula três organismos centrais da imprensa nativa digital: (1) uma Grelha Modular na Home com manchete de alto impacto visual, blocos de última hora com miniaturas e fluxos temáticos verticais; (2) templates de Artigo focados na utilidade do leitor, integrando barras de metadados com acesso direto a áudio/podcast ('6 min'), contagem de comentários e ferramentas de partilha; e (3) uma Paywall Dinâmica de conversão comunitária ('Já somos quase 50.000 assinantes') com planos faseados (Low Cost, Standard, Premium), alternador anual/mensal e incentivos de produto físico (garrafa de vinho). No Componente-Testemunha, podes alternar interativamente entre estes três organismos e inspecionar a coerência de tokens, hierarquia e conformidade WCAG.",
+          "content": "Visualmente, o Observador distingue-se pelo azul-petróleo (fugindo ao vermelho que domina o mercado português) e por títulos serifados de inspiração transicional/moderna, combinados com tipografia sem serifa nos metadados. Na análise do componente-testemunha, estuda-se o Card Híbrido, que junta etiqueta de tópico, título, indicador de conteúdo Premium e botão de áudio. Mostra como o design system desta dissertação pode resolver a densidade de informação e cumprir a WCAG 2.2 AA.",
           "witnessComponent": {
-            "type": "observador-born-digital-system",
+            "type": "observador-born-digital-card",
             "interactiveFeatures": [
-              "Alternar entre Grelha da Home, Artigo com Áudio e Paywall Dinâmica",
-              "Simular ciclo de faturação Anual vs. Mensal na Paywall",
-              "Interagir com o leitor inline de Podcast e barra de utilidade do artigo"
+              "Toggle Content Type: Standard Article vs Audio/Podcast Card vs Premium Locked",
+              "Inspect Mobile Viewport Density (Audio Player + Sticky Header vs Reading Area)"
             ],
-            "wcagNotes": "Conformidade WCAG 2.2: O azul institucional (#004F71 / #007198) cumpre 4.5:1 AA sobre fundo branco; os alvos táteis dos botões de áudio, alertas e seleção de planos respeitam o critério 2.5.8 (mín. 44x44px); e os controlos de rádio da paywall garantem navegação lógica por teclado sem armadilhas de foco (2.4.3)."
+            "wcagNotes": "Análise do rácio de contraste da cor de acento azul sobre fundos claros/cinzentos e validação de áreas de toque (44x44px) nos controlos de áudio integrados no cartão."
           }
         }
       }
@@ -796,22 +794,22 @@ window.MATRIX_DATA = {
     {
       "from": "L0.N2",
       "to": "L1.N6",
-      "relation": "A grelha modular de Müller-Brockmann e os programas de Gerstner evoluem para os layouts de contentores e Design Tokens."
+      "relation": "A grelha modular de Müller-Brockmann e os programas de Gerstner evoluem para os layouts por contentores e para os design tokens."
     },
     {
       "from": "L1.N2",
       "to": "L6.N2",
-      "relation": "Transferência direta de metodologia editorial: Mark Porter e Christian Schwartz lideram tanto o redesenho do The Guardian (2005) como o do Público (2006)."
+      "relation": "Mark Porter lidera o redesenho do The Guardian (2005) e o do Público (2006), com Christian Schwartz na tipografia: a mesma metodologia editorial passa de um jornal para o outro."
     },
     {
       "from": "L2.N5",
       "to": "L6.N7",
-      "relation": "As diretrizes de acessibilidade pioneiras do BBC GEL informam diretamente os critérios de correção WCAG aplicados ao projeto prático em Portugal."
+      "relation": "As diretrizes de acessibilidade da BBC GEL, pioneiras, orientam os critérios WCAG usados no projeto prático em Portugal."
     },
     {
       "from": "L6.N7",
       "to": "L7.N7",
-      "relation": "Contraste comparativo no panorama português: a herança impressa do Público (vermelho) vs. a matriz nativa digital e áudio-cêntrica do Observador (azul)."
+      "relation": "Dois casos portugueses frente a frente: a herança impressa do Público (vermelho) e o Observador, nativo digital e centrado no áudio (azul)."
     }
   ]
 };
