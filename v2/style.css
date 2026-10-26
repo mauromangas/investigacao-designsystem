@@ -51,6 +51,7 @@ body.theme-paper-dark {
   --border-hairline: #2E3136;
   --border-heavy: #EAE8E3;
   --border-solid: #3E434A;
+  --editorial-news: #FF5A52;
 }
 
 /* Modo Alto Contraste AAA */
@@ -228,9 +229,10 @@ time, .node-meta-time, .scale-step-btn, .ruler-tick-num, .telemetry-value, .benc
 
 .telemetry-value {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   color: var(--ink-primary);
+  letter-spacing: 0.03em;
   white-space: nowrap;
 }
 
@@ -335,6 +337,14 @@ time, .node-meta-time, .scale-step-btn, .ruler-tick-num, .telemetry-value, .benc
   overflow: auto;
   position: relative;
   background-color: var(--canvas-bg);
+  scroll-padding-left: 216px;
+  scroll-padding-top: 92px;
+  scroll-behavior: smooth;
+}
+
+.v2-workspace.state-split .v2-grid-scroll-viewport {
+  scroll-padding-left: 146px;
+  scroll-padding-top: 92px;
 }
 
 /* Camada SVG de Mira Ortogonal (Crosshairs) */
@@ -425,6 +435,8 @@ time, .node-meta-time, .scale-step-btn, .ruler-tick-num, .telemetry-value, .benc
   z-index: 35;
   padding: 0.85rem 1rem;
   border: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
 }
 
 .corner-axis-tag {
@@ -526,6 +538,7 @@ body.theme-paper-dark .v2-col-header.col-highlighted {
   flex-direction: column;
   justify-content: space-between;
   min-height: 130px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.06);
   transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 

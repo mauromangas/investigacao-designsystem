@@ -159,10 +159,15 @@
     // Canto Superior Esquerdo
     const corner = document.createElement('div');
     corner.className = 'v2-matrix-corner';
+    corner.title = 'Clique para voltar à coordenada inicial L0.N1';
     corner.innerHTML = `
       <span class="corner-axis-tag">MATRIZ 8×7</span>
       <span class="corner-label-text">CASOS / DIMENSÕES</span>
     `;
+    corner.addEventListener('click', () => {
+      dom.gridViewport.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+      setFocusedCell(0, 0, true);
+    });
     dom.matrixTable.appendChild(corner);
 
     // Cabeçalhos das Colunas
@@ -181,7 +186,10 @@
         </div>
       `;
       colHeader.addEventListener('click', () => {
-        setFocusedCell(state.rowIndex, cIdx);
+        setFocusedCell(state.rowIndex, cIdx, true);
+        if (cIdx === 0) {
+          dom.gridViewport.scrollTo({ left: 0, behavior: 'smooth' });
+        }
       });
       dom.matrixTable.appendChild(colHeader);
     });
@@ -260,6 +268,67 @@
   // ==========================================================================
   // 4. ATUALIZAÇÃO DO NÓ FOCADO & MIRA CARTOGRÁFICA (CROSSHAIRS)
   // ==========================================================================
+  /**
+   * Garante a visibilidade total da célula tendo em conta a coluna fixa da esquerda (sticky)
+   * e a linha de cabeçalho fixa do topo (sticky), tanto no modo panorâmico como no split-bench.
+   */
+  function ensureCellVisible(cellEl) {
+    if (!cellEl || !dom.gridViewport) return;
+
+    const container = dom.gridViewport;
+    const isSplit = state.isBenchOpen;
+
+    // Obter larguras dinâmicas reais dos elementos sticky
+    const rowHeader = document.querySelector('.v2-row-header');
+    const colHeader = document.querySelector('.v2-col-header');
+
+    // Largura da coluna fixa (com margem de respiração de 12px)
+    const stickyColWidth = rowHeader 
+      ? rowHeader.getBoundingClientRect().width + 12 
+      : (isSplit ? 152 : 222);
+
+    // Altura do cabeçalho de coluna (com margem de respiração de 12px)
+    const stickyHeaderHeight = colHeader 
+      ? colHeader.getBoundingClientRect().height + 12 
+      : 96;
+
+    const cellRect = cellEl.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
+
+    const effectiveLeft = containerRect.left + stickyColWidth;
+    const effectiveRight = containerRect.right;
+    const effectiveTop = containerRect.top + stickyHeaderHeight;
+    const effectiveBottom = containerRect.bottom;
+
+    const colIdx = parseInt(cellEl.dataset.colIndex, 10);
+
+    // Scroll Horizontal
+    if (colIdx === 0 && cellRect.left < effectiveLeft) {
+      // Primeira coluna (N1): scroll direto para o início absoluto (0)
+      container.scrollTo({ left: 0, behavior: 'smooth' });
+    } else if (cellRect.left < effectiveLeft) {
+      // Célula está escondida por baixo da coluna fixa da esquerda
+      const scrollDiff = effectiveLeft - cellRect.left + 16;
+      container.scrollBy({ left: -scrollDiff, behavior: 'smooth' });
+    } else if (cellRect.right > effectiveRight) {
+      // Célula está cortada à direita
+      const scrollDiff = cellRect.right - effectiveRight + 24;
+      container.scrollBy({ left: scrollDiff, behavior: 'smooth' });
+    }
+
+    // Scroll Vertical
+    const rowIdx = parseInt(cellEl.dataset.rowIndex, 10);
+    if (rowIdx === 0 && cellRect.top < effectiveTop) {
+      container.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (cellRect.top < effectiveTop) {
+      const scrollDiff = effectiveTop - cellRect.top + 16;
+      container.scrollBy({ top: -scrollDiff, behavior: 'smooth' });
+    } else if (cellRect.bottom > effectiveBottom) {
+      const scrollDiff = cellRect.bottom - effectiveBottom + 24;
+      container.scrollBy({ top: scrollDiff, behavior: 'smooth' });
+    }
+  }
+
   function setFocusedCell(rIdx, cIdx, scrollIntoView = true) {
     if (rIdx < 0) rIdx = 0;
     if (rIdx >= ROW_IDS.length) rIdx = ROW_IDS.length - 1;
@@ -282,9 +351,8 @@
     const cellEl = document.getElementById(`cell-${coord.replace('.', '-')}`);
     if (cellEl) {
       cellEl.classList.add('selected');
-      if (scrollIntoView && !state.isBenchOpen) {
-        // Assegura visibilidade suave dentro do contentor
-        cellEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+      if (scrollIntoView) {
+        ensureCellVisible(cellEl);
       }
     }
 
@@ -353,6 +421,7 @@
     setTimeout(() => {
       const cellEl = document.getElementById(`cell-${coord.replace('.', '-')}`);
       updateCrosshairs(cellEl);
+      ensureCellVisible(cellEl);
       if (state.isLineageActive) {
         renderLineagePaths();
       }
@@ -369,6 +438,7 @@
     setTimeout(() => {
       const cellEl = document.getElementById(`cell-${state.activeCoord.replace('.', '-')}`);
       updateCrosshairs(cellEl);
+      ensureCellVisible(cellEl);
       if (state.isLineageActive) {
         renderLineagePaths();
       }
