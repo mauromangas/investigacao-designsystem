@@ -14,6 +14,13 @@
 </head>
 <body class="canvas-base">
 
+  <div id="rotateOverlay">
+    <div class="rotate-box">
+      <span class="rotate-icon">↻</span>
+      <p class="rotate-text">Roda o dispositivo para o modo horizontal (landscape) para navegar na matriz.</p>
+    </div>
+  </div>
+
   <!-- Comutador Global de Versão (Version Switcher) -->
   <nav class="version-switcher-bar" aria-label="Comutador Global de Versão">
     <div class="version-switcher-brand">ESAD.CR · Matriz de análise</div>
@@ -33,32 +40,15 @@
         <span class="meta-val">MESTRADO EM DESIGN GRÁFICO — ESAD.CR</span>
       </div>
       <div class="meta-block text-right">
+        <button id="btnToggleTheme" class="swiss-btn-help" title="Alternar Modo Noturno">◐ TEMA</button>
         <button id="btnOpenGuide" class="swiss-btn-help" aria-haspopup="dialog" aria-label="Abrir Guia de Utilização (Rato e Teclado)">? COMO NAVEGAR</button>
-        <span class="meta-val" id="active-coord-display">8 × 7 MATRIZ [L0–L7 : N1–N7]</span>
       </div>
     </div>
 
     <div class="header-main-title">
       <div class="title-col">
-        <div class="badge-swiss">ESQUEMA DE INVESTIGAÇÃO</div>
         <h1 class="main-title">Matriz Genealógica &amp; Comparativa de Design Systems Editoriais</h1>
         <p class="main-subtitle">Grelha Suíça e Formatos Impressos &rarr; Engenharia de Tokens Multi-Marca + Diagnóstico Nacional</p>
-      </div>
-      <div class="header-legend-col">
-        <div class="legend-box">
-          <div class="legend-row">
-            <span class="legend-swatch swatch-predigital"></span>
-            <span class="legend-text"><strong>N1–N2:</strong> Fase Pré-Digital (Print, Grelhas Físicas e Raízes)</span>
-          </div>
-          <div class="legend-row">
-            <span class="legend-swatch swatch-digital"></span>
-            <span class="legend-text"><strong>N3–N7:</strong> Sistematização Digital (DS, Tokens, Leis, Output)</span>
-          </div>
-          <div class="legend-row">
-            <span class="legend-swatch swatch-born-digital"></span>
-            <span class="legend-text"><strong>L7:</strong> Nativo Digital (Pré-História sem Papel)</span>
-          </div>
-        </div>
       </div>
     </div>
 

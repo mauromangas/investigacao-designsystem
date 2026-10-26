@@ -2947,3 +2947,256 @@ body.canvas-base {
   padding: 1px 5px;
   font-size: 10px;
 }
+
+/* ==========================================================================
+   MODO ESCURO NA V1 (THEME-DARK)
+   ========================================================================== */
+body.theme-dark {
+  --canvas-bg: #0B0D0E;
+  --grid-gap-bg: #1A1D20;
+
+  --surface-cell: #16181B;
+  --surface-predigital: #1C1F24;
+  --surface-header: #21252B;
+  --surface-header-predigital: #282D35;
+  --surface-hover: #262B32;
+  --surface-selected: #1E232A;
+  --surface-active: #16181B;
+  --surface-paper-elevated: #242930;
+  
+  --ink-primary: #EAE8E3;
+  --ink-secondary: #B5B2AA;
+  --ink-muted: #8C8981;
+  --ink-inverted: #0F1115;
+  
+  --border-solid: #3E434A;
+  --swiss-red: #FF5A52;
+  --editorial-news: #FF5A52;
+}
+
+body.theme-dark .swiss-header {
+  background-color: #16181B;
+  border-bottom-color: #3E434A;
+}
+
+body.theme-dark .matrix-cell {
+  background-color: var(--surface-cell);
+  color: var(--ink-primary);
+}
+
+body.theme-dark .matrix-cell.cell-predigital {
+  background-color: var(--surface-predigital);
+}
+
+body.theme-dark .matrix-cell.is-selected {
+  background-color: var(--surface-selected);
+  box-shadow: inset 4px 0 0 var(--swiss-red);
+}
+
+body.theme-dark .matrix-cell:hover,
+body.theme-dark .matrix-cell:focus-visible {
+  background-color: var(--surface-hover);
+}
+
+body.theme-dark .matrix-col-header,
+body.theme-dark .matrix-row-header,
+body.theme-dark .matrix-corner-cell {
+  background-color: var(--surface-header);
+  color: var(--ink-primary);
+}
+
+body.theme-dark .matrix-col-header.header-predigital {
+  background-color: var(--surface-header-predigital);
+}
+
+body.theme-dark .detail-panel {
+  background-color: #16181B;
+  color: var(--ink-primary);
+}
+
+body.theme-dark .detail-top-bar,
+body.theme-dark .detail-nav-footer {
+  background-color: #1F2329;
+  border-color: #3E434A;
+}
+
+body.theme-dark .swiss-btn-help {
+  background-color: #242930;
+  color: #EAE8E3;
+  border-color: #3E434A;
+}
+
+body.theme-dark .swiss-btn-help:hover {
+  background-color: #3E434A;
+  color: #FFFFFF;
+}
+
+body.theme-dark .guide-modal-panel {
+  background-color: #16181B;
+  color: var(--ink-primary);
+  border-color: #3E434A;
+}
+
+body.theme-dark .guide-modal-header,
+body.theme-dark .guide-modal-footer,
+body.theme-dark .guide-method-card {
+  background-color: #1F2329;
+  border-color: #3E434A;
+}
+
+body.theme-dark .key-arrow-btn {
+  background-color: #1C1F24;
+  border-color: #3E434A;
+  color: var(--ink-primary);
+}
+
+body.theme-dark .key-arrow-btn .key-cap {
+  background-color: #282D35;
+  border-color: #3E434A;
+}
+
+/* ==========================================================================
+   BADGES DE FASE DENTRO DAS CÉLULAS (N1-N2 vs N3-N7)
+   ========================================================================== */
+.node-phase-badge {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 1px 5px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.phase-badge-predigital {
+  background-color: #E2E6EA;
+  color: #333A42;
+  border: 1px solid #CBD3DC;
+}
+
+.phase-badge-digital {
+  background-color: #EBF3F5;
+  color: #0E4F5E;
+  border: 1px solid #BCE0E7;
+}
+
+.phase-badge-borndigital {
+  background-color: #FDF2E9;
+  color: #8F4700;
+  border: 1px solid #F5CBA7;
+}
+
+body.theme-dark .phase-badge-predigital {
+  background-color: #242930;
+  color: #B5B2AA;
+  border-color: #3E434A;
+}
+
+body.theme-dark .phase-badge-digital {
+  background-color: #162B33;
+  color: #5BC0BE;
+  border-color: #1F424E;
+}
+
+body.theme-dark .phase-badge-borndigital {
+  background-color: #332211;
+  color: #F5A623;
+  border-color: #4D3319;
+}
+
+/* ==========================================================================
+   AVISO "RODA O ECRÃ" — Mobile Portrait Only
+   ========================================================================== */
+#rotateOverlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(15, 17, 21, 0.96);
+  color: #FFFFFF;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  backdrop-filter: blur(4px);
+}
+
+.rotate-box {
+  background: #1C1E22;
+  border: 1px solid #383A3F;
+  border-top: 3px solid var(--swiss-red);
+  padding: 1.75rem 1.5rem;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.rotate-icon {
+  font-size: 2.2rem;
+  color: var(--swiss-red);
+  animation: rotateHint 2.5s ease-in-out infinite;
+}
+
+@keyframes rotateHint {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(90deg); }
+}
+
+.rotate-text {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.5;
+  color: #EAE8E3;
+}
+
+@media (max-width: 900px) and (orientation: portrait) {
+  #rotateOverlay {
+    display: flex;
+  }
+}
+
+/* ==========================================================================
+   HEADER COMPACTO EM MOBILE LANDSCAPE
+   ========================================================================== */
+@media (max-width: 900px) and (orientation: landscape) {
+  .version-switcher-bar {
+    height: 20px;
+    font-size: 9px;
+  }
+
+  .swiss-header {
+    padding: 4px 12px;
+  }
+
+  .header-top-meta {
+    margin-bottom: 2px;
+  }
+
+  .main-title {
+    font-size: 1rem;
+    line-height: 1.15;
+  }
+
+  .main-subtitle {
+    display: none;
+  }
+
+  .swiss-btn-help {
+    padding: 2px 6px;
+    font-size: 9.5px;
+  }
+}
+
+/* ==========================================================================
+   SETAS HORIZONTAIS COM MAIS VISIBILIDADE
+   ========================================================================== */
+.key-left .key-cap,
+.key-right .key-cap {
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  transform: scaleY(1.15);
+}

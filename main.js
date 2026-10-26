@@ -165,12 +165,15 @@
           cell.classList.add('card-rhythm-opinion');
         }
 
+        const phaseLabel = (colId === 'N1' || colId === 'N2') ? 'PRÉ-DIGITAL' : (isBornDigital ? 'NATIVO DIGITAL' : 'DIGITAL');
+        const phaseClass = (colId === 'N1' || colId === 'N2') ? 'phase-badge-predigital' : (isBornDigital ? 'phase-badge-borndigital' : 'phase-badge-digital');
+
         cell.innerHTML = `
           <div class="node-cell-top">
             <span class="node-cell-coord">[${coord}]</span>
             <div class="node-cell-tags">
+              <span class="node-phase-badge ${phaseClass}">${phaseLabel}</span>
               ${colId === 'N7' ? '<span class="node-witness-indicator">ARTEFACTO</span>' : ''}
-              ${isBornDigital ? '<span class="born-digital-badge">BORN-DIGITAL</span>' : ''}
               ${tagsHtml}
             </div>
           </div>
@@ -232,8 +235,8 @@
     // Atualizar Barra de Estado
     const nodeInfo = getNodeData(currentCoord);
     if (nodeInfo) {
-      dom.statusBarFocusCoord.textContent = `${currentCoord} — ${nodeInfo.row.entity}: ${nodeInfo.node.title}`;
-      dom.activeCoordDisplay.textContent = `[${currentCoord}] ${nodeInfo.row.entity.toUpperCase()}`;
+      if (dom.statusBarFocusCoord) dom.statusBarFocusCoord.textContent = `${currentCoord} — ${nodeInfo.row.entity}: ${nodeInfo.node.title}`;
+      if (dom.activeCoordDisplay) dom.activeCoordDisplay.textContent = `[${currentCoord}] ${nodeInfo.row.entity.toUpperCase()}`;
     }
   }
 
@@ -449,9 +452,7 @@
         </div>
       `;
       controlsHtml = `
-        <button class="witness-ctrl-btn active" id="btnRatio3x4">Proporção 3×4</button>
-        <button class="witness-ctrl-btn" id="btnRatio4x6">Proporção 4×6</button>
-        <button class="witness-ctrl-btn" id="btnToggleLines">Ocultar/Exibir Linhas</button>
+        <button class="witness-ctrl-btn" id="btnToggleLines">Alternar Linhas da Grelha</button>
       `;
     } else if (coord === 'L1.N7') {
       // Guardian Source: Theming dos 5 Pilares
@@ -519,9 +520,7 @@
           </div>
         </div>
       `;
-      controlsHtml = `
-        <button class="witness-ctrl-btn" id="btnFtChartToggle">Alternar Vocabulário Gráfico</button>
-      `;
+      controlsHtml = '';
     } else if (coord === 'L4.N7') {
       // NYT Ink: Alternância Dark Mode / Light Mode
       canvasHtml = `
@@ -905,20 +904,8 @@
   function attachWitnessEventListeners(coord) {
     if (coord === 'L0.N7') {
       const grid = document.getElementById('swissGridSpecimen');
-      const btn3x4 = document.getElementById('btnRatio3x4');
-      const btn4x6 = document.getElementById('btnRatio4x6');
       const btnToggle = document.getElementById('btnToggleLines');
 
-      btn3x4?.addEventListener('click', () => {
-        grid.className = 'swiss-specimen-grid ratio-3x4';
-        btn3x4.classList.add('active');
-        btn4x6.classList.remove('active');
-      });
-      btn4x6?.addEventListener('click', () => {
-        grid.className = 'swiss-specimen-grid ratio-4x6';
-        btn4x6.classList.add('active');
-        btn3x4.classList.remove('active');
-      });
       btnToggle?.addEventListener('click', () => {
         grid.querySelectorAll('.swiss-grid-cell').forEach(c => {
           c.style.border = c.style.border === 'none' ? '1px dashed #A0A0A0' : 'none';
@@ -953,15 +940,6 @@
       btn?.addEventListener('click', () => {
         overlay.classList.toggle('visible');
         btn.classList.toggle('active');
-      });
-    } else if (coord === 'L3.N7') {
-      const btn = document.getElementById('btnFtChartToggle');
-      const bars = dom.detailWitnessCol.querySelectorAll('.ft-bar');
-      btn?.addEventListener('click', () => {
-        btn.classList.toggle('active');
-        bars.forEach(b => {
-          b.style.height = `${Math.floor(Math.random() * 80) + 20}%`;
-        });
       });
     } else if (coord === 'L4.N7') {
       const card = document.getElementById('nytSpecimenCard');
@@ -1326,10 +1304,34 @@
     }
   }
 
+  function initTheme() {
+    const btnToggleTheme = document.getElementById('btnToggleTheme');
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        document.body.classList.add('theme-dark');
+        localStorage.setItem('matrix_v1_theme', 'dark');
+        if (btnToggleTheme) btnToggleTheme.innerHTML = '☼ CLARO';
+      } else {
+        document.body.classList.remove('theme-dark');
+        localStorage.setItem('matrix_v1_theme', 'light');
+        if (btnToggleTheme) btnToggleTheme.innerHTML = '◐ TEMA';
+      }
+    }
+    btnToggleTheme?.addEventListener('click', () => {
+      const isDark = document.body.classList.contains('theme-dark');
+      applyTheme(isDark ? 'light' : 'dark');
+    });
+    const saved = localStorage.getItem('matrix_v1_theme');
+    if (saved === 'dark') {
+      applyTheme('dark');
+    }
+  }
+
   // ==========================================================================
   // INICIALIZAÇÃO
   // ==========================================================================
   function init() {
+    initTheme();
     renderMatrix();
 
     // Eventos de clique do Modal de Nó

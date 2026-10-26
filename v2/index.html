@@ -14,6 +14,13 @@
 </head>
 <body class="theme-paper-light">
 
+  <div id="rotateOverlay">
+    <div class="rotate-box">
+      <span class="rotate-icon">↻</span>
+      <p class="rotate-text">Roda o dispositivo para o modo horizontal (landscape) para navegar na matriz.</p>
+    </div>
+  </div>
+
   <!-- ======================================================================
        1. COMUTADOR GLOBAL DE VERSÃO (28px TECHNICAL BAR)
        ====================================================================== -->
@@ -35,16 +42,7 @@
   <header class="v2-header" role="banner">
     <div class="v2-header-top">
       <div class="v2-meta-academic">
-        <span class="v2-badge-thesis">INVESTIGAÇÃO CIENTÍFICA</span>
-        <h1 class="v2-app-title">O Tear Editorial <span class="v2-sub-title">/ Split-Bench Cartográfico de Design Systems</span></h1>
-      </div>
-
-      <!-- Telemetria do Nó Focado (Tempo Real) -->
-      <div class="v2-telemetry-box" aria-live="polite" aria-atomic="true">
-        <span class="telemetry-label">TELEMETRIA ÓTICA</span>
-        <div id="v2Telemetry" class="telemetry-value">
-          [ COORD: L0.N1 | ENTIDADE: ESCOLA SUÍÇA | EIXO: RAIZ IMPRESSA ]
-        </div>
+        <h1 class="v2-app-title">Matriz Genealógica <span class="v2-sub-title">/ Bancada Cartográfica de Design Systems</span></h1>
       </div>
 
       <!-- Barra de Ferramentas Técnicas -->
@@ -179,7 +177,7 @@
             <!-- Coluna Lateral: Componente-Testemunha (Raio-X Interativo) -->
             <div class="bench-specimen-col" id="benchSpecimenCol">
               <div class="specimen-frame-header">
-                <span class="specimen-label">COMPONENTE-TESTEMUNHA / RAIO-X</span>
+                <span class="specimen-label">ARTEFACTO / RAIO-X</span>
                 <span id="specimenBadgeCoord" class="specimen-badge">L0.N7</span>
               </div>
               <div id="benchSpecimenCanvas" class="bench-specimen-canvas">
@@ -201,7 +199,6 @@
 
       <!-- Rodapé Técnico com Navegação Quadrilateral -->
       <footer class="v2-bench-nav-bar">
-        <span class="nav-hint-txt">NAVEGAÇÃO DIRETA NA BANCADA:</span>
         <div class="bench-nav-buttons-cluster">
           <button id="btnBenchUp" class="bench-nav-btn" aria-label="Caso Anterior (Cima)">
             <kbd class="kbd-cap">↑</kbd> <span id="lblBenchUp">CASO ANTERIOR</span>

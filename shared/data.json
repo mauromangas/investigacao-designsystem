@@ -74,15 +74,15 @@
       "order": 7,
       "phase": "Design system digital",
       "name": "Resultado visual",
-      "subtitle": "Análise do componente-testemunha"
+      "subtitle": "Análise do artefacto visual"
     }
   ],
   "rows": [
     {
       "rowId": "L0",
       "order": 0,
-      "entity": "A teoria de base",
-      "systemName": "Escola Suíça",
+      "entity": "Escola Suíça",
+      "systemName": "Grelha Modular Suíça",
       "country": "Suíça / Internacional",
       "period": "1950–1970",
       "archetype": "A grelha como regra",
@@ -777,7 +777,7 @@
             "Card multimédia",
             "Diagnóstico comparativo"
           ],
-          "content": "Visualmente, o Observador distingue-se pelo azul-petróleo (fugindo ao vermelho que domina o mercado português) e por títulos serifados de inspiração transicional/moderna, combinados com tipografia sem serifa nos metadados. Na análise do componente-testemunha, estuda-se o Card Híbrido, que junta etiqueta de tópico, título, indicador de conteúdo Premium e botão de áudio. Mostra como o design system desta dissertação pode resolver a densidade de informação e cumprir a WCAG 2.2 AA.",
+          "content": "Visualmente, o Observador distingue-se pelo azul-petróleo (fugindo ao vermelho que domina o mercado português) e por títulos serifados de inspiração transicional/moderna, combinados com tipografia sem serifa nos metadados. Na análise do artefacto visual, estuda-se o Card Híbrido, que junta etiqueta de tópico, título, indicador de conteúdo Premium e botão de áudio. Mostra como o design system desta dissertação pode resolver a densidade de informação e cumprir a WCAG 2.2 AA.",
           "witnessComponent": {
             "type": "observador-born-digital-card",
             "interactiveFeatures": [

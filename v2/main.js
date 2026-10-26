@@ -343,8 +343,8 @@
     const dataObj = getNodeData(coord);
     if (!dataObj) return;
 
-    // 1. Atualizar Telemetria no Topo
-    dom.telemetry.textContent = `[ COORD: ${coord} | ENTIDADE: ${dataObj.row.entity.toUpperCase()} | EIXO: ${dataObj.column.name.toUpperCase()} ]`;
+    // 1. Atualizar Telemetria no Topo (guard para quando elemento está oculto)
+    if (dom.telemetry) dom.telemetry.textContent = `[ COORD: ${coord} | ENTIDADE: ${dataObj.row.entity.toUpperCase()} | EIXO: ${dataObj.column.name.toUpperCase()} ]`;
 
     // 2. Destacar Célula na Matriz
     document.querySelectorAll('.v2-matrix-cell.selected').forEach(el => el.classList.remove('selected'));
@@ -598,10 +598,10 @@
             ${dataObj.column.name}: ${dataObj.column.subtitle}
           </h4>
           <p style="font-family: var(--font-serif); font-size: 12.5px; line-height: 1.5; max-width: 380px; margin: 0 auto 1rem;">
-            Os Componentes-Testemunha com prototipagem interativa estão alojados na coluna N7 (Anatomia e Output Visual).
+            Os Artefactos com prototipagem interativa estão alojados na coluna N7 (Anatomia e Output Visual).
           </p>
           <button id="btnJumpToN7" class="v2-bench-btn" style="background-color: var(--editorial-news); color: #FFF; border: none; padding: 6px 14px;">
-            VER COMPONENTE-TESTEMUNHA DESTA ENTIDADE (N7) ➔
+            VER ARTEFACTO DESTA ENTIDADE (N7) ➔
           </button>
         </div>
       `;
@@ -639,22 +639,12 @@
         </div>
       `;
       dom.benchSpecimenControls.innerHTML = `
-        <button class="witness-ctrl-btn ${state.witnessState.swissRatio === '3x4' ? 'active' : ''}" id="btnSwiss3x4">Proporção 3×4</button>
-        <button class="witness-ctrl-btn ${state.witnessState.swissRatio === '4x6' ? 'active' : ''}" id="btnSwiss4x6">Proporção 4×6</button>
         <button class="witness-ctrl-btn" id="btnSwissLines">Alternar Linhas Visíveis</button>
       `;
       dom.benchWcagNotice.innerHTML = `
         <strong>WCAG 2.2 (1.4.10 Reflow):</strong> A grelha matemática suíça estabelece o princípio do layout proporcional sem scroll horizontal não intencional em ecrãs verticais.
       `;
 
-      document.getElementById('btnSwiss3x4').onclick = () => {
-        state.witnessState.swissRatio = '3x4';
-        renderBenchSpecimen(coord, dataObj);
-      };
-      document.getElementById('btnSwiss4x6').onclick = () => {
-        state.witnessState.swissRatio = '4x6';
-        renderBenchSpecimen(coord, dataObj);
-      };
       document.getElementById('btnSwissLines').onclick = () => {
         state.witnessState.swissShowLines = !state.witnessState.swissShowLines;
         renderBenchSpecimen(coord, dataObj);
@@ -744,16 +734,10 @@
           </div>
         </div>
       `;
-      dom.benchSpecimenControls.innerHTML = `
-        <button class="witness-ctrl-btn" id="btnToggleFtChart">Alternar Vocabulário Gráfico</button>
-      `;
+      dom.benchSpecimenControls.innerHTML = '';
       dom.benchWcagNotice.innerHTML = `
-        <strong>WCAG 2.2 (1.4.3 Contrast):</strong> A paleta do FT Origami atinge 11.2:1 AAA na relação entre texto escuro e o papel salmão.
+        <strong>WCAG 2.2 (1.4.3 Contrast):</strong> A paleta do FT Origami atinge 11.2:1 AAA na relação entre texto escuro e o papel salmão (#FFF1E5).
       `;
-      document.getElementById('btnToggleFtChart').onclick = () => {
-        state.witnessState.ftChartIndex++;
-        renderBenchSpecimen(coord, dataObj);
-      };
 
     } else if (coord === 'L4.N7') {
       // The New York Times: Ink System
@@ -1280,10 +1264,12 @@
     
     if (theme === 'paper-dark') {
       dom.body.classList.add('theme-paper-dark');
-    } else if (theme === 'high-contrast') {
-      dom.body.classList.add('theme-high-contrast');
+      localStorage.setItem('matrix_v2_theme', 'paper-dark');
+      if (dom.btnToggleTheme) dom.btnToggleTheme.innerHTML = '<span class="tool-glyph">☼</span> CLARO';
     } else {
       dom.body.classList.add('theme-paper-light');
+      localStorage.setItem('matrix_v2_theme', 'paper-light');
+      if (dom.btnToggleTheme) dom.btnToggleTheme.innerHTML = '<span class="tool-glyph">◐</span> TEMA';
     }
 
     // Atualizar botões no sheet mobile
@@ -1379,8 +1365,9 @@
           break;
         case 'Escape':
           e.preventDefault();
-          if (dom.v2HelpModal.getAttribute('aria-hidden') === 'false') {
+          if (dom.v2HelpModal.getAttribute('aria-hidden') === 'false' || dom.v2HelpModal.classList.contains('is-active')) {
             dom.v2HelpModal.setAttribute('aria-hidden', 'true');
+            dom.v2HelpModal.classList.remove('is-active');
           } else if (document.querySelector('.v2-bottom-sheet.is-open')) {
             closeAllSheets();
           } else if (state.isBenchOpen) {
@@ -1400,8 +1387,9 @@
         case 'h':
         case 'H':
           e.preventDefault();
-          const isHelpOpen = dom.v2HelpModal.getAttribute('aria-hidden') === 'false';
+          const isHelpOpen = dom.v2HelpModal.getAttribute('aria-hidden') === 'false' || dom.v2HelpModal.classList.contains('is-active');
           dom.v2HelpModal.setAttribute('aria-hidden', isHelpOpen ? 'true' : 'false');
+          dom.v2HelpModal.classList.toggle('is-active', !isHelpOpen);
           break;
       }
     });
@@ -1413,23 +1401,29 @@
     if (dom.btnPinNode) dom.btnPinNode.addEventListener('click', () => togglePinNode());
     if (dom.btnUnpinAllNodes) dom.btnUnpinAllNodes.addEventListener('click', unpinAllNodes);
 
+    function openHelpModal() {
+      dom.v2HelpModal.setAttribute('aria-hidden', 'false');
+      dom.v2HelpModal.classList.add('is-active');
+    }
+
+    function closeHelpModal() {
+      dom.v2HelpModal.setAttribute('aria-hidden', 'true');
+      dom.v2HelpModal.classList.remove('is-active');
+    }
+
     // Barra de Ferramentas
     dom.btnToggleLineage.addEventListener('click', toggleLineageLayer);
     dom.btnToggleTheme.addEventListener('click', () => {
-      if (state.currentTheme === 'paper-light') setTheme('paper-dark');
-      else if (state.currentTheme === 'paper-dark') setTheme('high-contrast');
-      else setTheme('paper-light');
+      if (state.currentTheme === 'paper-dark') setTheme('paper-light');
+      else setTheme('paper-dark');
     });
 
     // Modal de Ajuda
-    dom.btnOpenHelpV2.addEventListener('click', () => {
-      dom.v2HelpModal.setAttribute('aria-hidden', 'false');
-    });
-    dom.btnCloseHelpModal.addEventListener('click', () => {
-      dom.v2HelpModal.setAttribute('aria-hidden', 'true');
-    });
-    dom.btnDismissHelp.addEventListener('click', () => {
-      dom.v2HelpModal.setAttribute('aria-hidden', 'true');
+    dom.btnOpenHelpV2.addEventListener('click', openHelpModal);
+    dom.btnCloseHelpModal.addEventListener('click', closeHelpModal);
+    dom.btnDismissHelp.addEventListener('click', closeHelpModal);
+    dom.v2HelpModal.addEventListener('click', (e) => {
+      if (e.target === dom.v2HelpModal) closeHelpModal();
     });
 
     // Mobile Bottom Bar
@@ -1491,6 +1485,11 @@
 
     // Iniciar no Nó L0.N1 com mira cartográfica ativa
     setFocusedCell(0, 0);
+
+    const savedTheme = localStorage.getItem('matrix_v2_theme');
+    if (savedTheme === 'paper-dark') {
+      setTheme('paper-dark');
+    }
 
     console.info('Matriz Editorial v2.0 (O Tear Editorial / Split-Bench Cartográfico) carregada com sucesso.');
   }
