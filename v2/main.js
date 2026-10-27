@@ -1261,10 +1261,14 @@
   function setTheme(theme) {
     state.currentTheme = theme;
     dom.body.classList.remove('theme-paper-light', 'theme-paper-dark', 'theme-high-contrast');
-    
+
     if (theme === 'paper-dark') {
       dom.body.classList.add('theme-paper-dark');
       localStorage.setItem('matrix_v2_theme', 'paper-dark');
+      if (dom.btnToggleTheme) dom.btnToggleTheme.innerHTML = '<span class="tool-glyph">☼</span> CLARO';
+    } else if (theme === 'high-contrast') {
+      dom.body.classList.add('theme-high-contrast');
+      localStorage.setItem('matrix_v2_theme', 'high-contrast');
       if (dom.btnToggleTheme) dom.btnToggleTheme.innerHTML = '<span class="tool-glyph">☼</span> CLARO';
     } else {
       dom.body.classList.add('theme-paper-light');
@@ -1487,11 +1491,11 @@
     setFocusedCell(0, 0);
 
     const savedTheme = localStorage.getItem('matrix_v2_theme');
-    if (savedTheme === 'paper-dark') {
-      setTheme('paper-dark');
+    if (savedTheme === 'paper-dark' || savedTheme === 'high-contrast') {
+      setTheme(savedTheme);
     }
 
-    console.info('Matriz Editorial v2.0 (O Tear Editorial / Split-Bench Cartográfico) carregada com sucesso.');
+    console.info('Matriz Genealógica v2.0 (Bancada Cartográfica de Design Systems) carregada com sucesso.');
   }
 
   // Executar após DOM pronto
